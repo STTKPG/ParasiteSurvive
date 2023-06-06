@@ -1,0 +1,16 @@
+﻿  Main.cpp
+C:\Users\satot\Documents\ParasiteSurvive\DxLibH\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  Camera.cpp
+C:\Users\satot\Documents\ParasiteSurvive\DxLibH\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\Users\satot\Documents\ParasiteSurvive\Source\Camera.h(11,26): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\satot\Documents\ParasiteSurvive\Source\Camera.h(11,20): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  Floor.cpp
+  ObjectFactory.cpp
+  ObjectManager.cpp
+C:\Users\satot\Documents\ParasiteSurvive\DxLibH\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  Player.cpp
+C:\Users\satot\Documents\ParasiteSurvive\DxLibH\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  TargetObject.cpp
+  SceneFactory.cpp
+  コードを生成中...
+  ParasiteSurvive.vcxproj -> C:\Users\satot\Documents\ParasiteSurvive\x64\Debug\ParasiteSurvive.exe

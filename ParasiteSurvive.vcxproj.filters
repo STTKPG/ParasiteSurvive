@@ -48,6 +48,9 @@
     <ClInclude Include="Source\ObjectFile\TargetObject.h">
       <Filter>Source\ObjectFile</Filter>
     </ClInclude>
+    <ClInclude Include="Source\ObjectFile\Floor.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\SceneFile\SceneFactory.cpp">
@@ -69,6 +72,9 @@
       <Filter>Source\ObjectFile</Filter>
     </ClCompile>
     <ClCompile Include="Source\ObjectFile\TargetObject.cpp">
+      <Filter>Source\ObjectFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ObjectFile\Floor.cpp">
       <Filter>Source\ObjectFile</Filter>
     </ClCompile>
   </ItemGroup>
