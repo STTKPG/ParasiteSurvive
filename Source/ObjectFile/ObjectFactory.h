@@ -6,7 +6,20 @@
 class ObjectFactory
 {
 public:
-	static ObjectBase* Create(ObjectBase::ObjectType Type);
+	static ObjectBase* Create(ObjectBase::ObjectType Type)
+	{
+		switch (Type)
+		{
+		case ObjectBase::Player:
+			break;
+		case ObjectBase::Enemy:
+			break;
+		case ObjectBase::Entity:
+			break;
+		default:
+			break;
+		}
+	}
 };
 
 

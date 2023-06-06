@@ -12,9 +12,4 @@ namespace Scene
 		Clear
 	};
 }
-
-void Mouse()
-{
-
-}
 #endif // !COMMON_H

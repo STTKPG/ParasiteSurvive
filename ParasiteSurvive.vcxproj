@@ -24,6 +24,7 @@
     <ClInclude Include="Source\ObjectFile\Bullet.h" />
     <ClInclude Include="Source\ObjectFile\Enemy.h" />
     <ClInclude Include="Source\ObjectFile\Floor.h" />
+    <ClInclude Include="Source\ObjectFile\ModelManager.h" />
     <ClInclude Include="Source\ObjectFile\ObjectBase.h" />
     <ClInclude Include="Source\ObjectFile\ObjectFactory.h" />
     <ClInclude Include="Source\ObjectFile\ObjectManager.h" />
@@ -37,6 +38,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Source\Camera.cpp" />
     <ClCompile Include="Source\ObjectFile\Floor.cpp" />
+    <ClCompile Include="Source\ObjectFile\ModelManager.cpp" />
     <ClCompile Include="Source\ObjectFile\ObjectFactory.cpp" />
     <ClCompile Include="Source\ObjectFile\ObjectManager.cpp" />
     <ClCompile Include="Source\ObjectFile\Player.cpp" />
