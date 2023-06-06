@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{f7e721fc-6db1-47cc-9f9f-79665dba5196}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SceneFile">
+      <UniqueIdentifier>{73757689-0e07-4326-a45f-0b2cb3d29ecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ObjectFile">
+      <UniqueIdentifier>{a0245b37-a2ce-4150-8110-00c5fc2a4cbf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\SceneFile\SceneFactory.h">
+      <Filter>Source\SceneFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SceneFile\SceneManager.h">
+      <Filter>Source\SceneFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SceneFile\SceneBase.h">
+      <Filter>Source\SceneFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ObjectFile\ObjectBase.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ObjectFile\Enemy.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ObjectFile\Bullet.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ObjectFile\Player.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Camera.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ObjectFile\ObjectManager.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ObjectFile\ObjectFactory.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ObjectFile\TargetObject.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\SceneFile\SceneFactory.cpp">
+      <Filter>Source\SceneFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ObjectFile\Player.cpp">
+      <Filter>Source\ObjectFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Camera.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ObjectFile\ObjectManager.cpp">
+      <Filter>Source\ObjectFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ObjectFile\ObjectFactory.cpp">
+      <Filter>Source\ObjectFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ObjectFile\TargetObject.cpp">
+      <Filter>Source\ObjectFile</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
