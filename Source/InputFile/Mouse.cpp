@@ -4,7 +4,7 @@ bool Mouse::GetMousePointer(VECTOR *mousevector)
 {
 	int XBuffer;
 	int YBuffer;
-
+	
 	if (GetMousePoint(&XBuffer, &YBuffer) == -1)
 	{
 		return false;

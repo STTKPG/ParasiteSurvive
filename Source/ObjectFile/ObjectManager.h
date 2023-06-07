@@ -29,7 +29,7 @@ private:
 	{
 		Objects.clear();
 	}
-	ObjectManager(ObjectManager& Obj) = delete;
+	ObjectManager(ObjectManager& Ins) = delete;
 private:
 	std::list<ObjectBase*> Objects;
 

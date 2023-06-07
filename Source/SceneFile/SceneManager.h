@@ -4,7 +4,7 @@
 class SceneManager
 {
 public:
-	SceneManager* Instance()
+	static SceneManager* Instance()
 	{
 		static SceneManager instance;
 		return &instance;
@@ -14,7 +14,7 @@ public:
 
 private:
 	SceneManager(){}
-	SceneManager(const SceneManager &obj)
+	SceneManager(const SceneManager& Ins) = delete;
 };
 
 #endif // !SCENEMANAGER_H

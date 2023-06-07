@@ -7,6 +7,12 @@
 class ModelManager
 {
 public:
+	static ModelManager* Instance()
+	{
+		static ModelManager instance;
+		return &instance;
+	}
+public:
 
 	~ModelManager(){}
 
@@ -17,7 +23,7 @@ public:
 
 private:
 	ModelManager() {}
-	ModelManager(ModelManager& Obj) = delete;
+	ModelManager(ModelManager& Ins) = delete;
 
 private:
 	std::map<std::string, int> ModelData;
