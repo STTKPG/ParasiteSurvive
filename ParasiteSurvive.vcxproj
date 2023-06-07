@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="Source\Camera.h" />
     <ClInclude Include="Source\Common.h" />
+    <ClInclude Include="Source\InputFile\Mouse.h" />
     <ClInclude Include="Source\ObjectFile\Bullet.h" />
     <ClInclude Include="Source\ObjectFile\Enemy.h" />
     <ClInclude Include="Source\ObjectFile\Floor.h" />
@@ -37,6 +38,7 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Source\Camera.cpp" />
+    <ClCompile Include="Source\InputFile\Mouse.cpp" />
     <ClCompile Include="Source\ObjectFile\Floor.cpp" />
     <ClCompile Include="Source\ObjectFile\ModelManager.cpp" />
     <ClCompile Include="Source\ObjectFile\ObjectFactory.cpp" />

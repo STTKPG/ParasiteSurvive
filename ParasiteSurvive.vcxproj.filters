@@ -10,6 +10,9 @@
     <Filter Include="Source\ObjectFile">
       <UniqueIdentifier>{a0245b37-a2ce-4150-8110-00c5fc2a4cbf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\InputFile">
+      <UniqueIdentifier>{a4d6de3f-01e4-48e3-843d-2b4c0c941974}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\SceneFile\SceneFactory.h">
@@ -54,6 +57,9 @@
     <ClInclude Include="Source\ObjectFile\ModelManager.h">
       <Filter>Source\ObjectFile</Filter>
     </ClInclude>
+    <ClInclude Include="Source\InputFile\Mouse.h">
+      <Filter>Source\InputFile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\SceneFile\SceneFactory.cpp">
@@ -82,6 +88,9 @@
     </ClCompile>
     <ClCompile Include="Source\ObjectFile\ModelManager.cpp">
       <Filter>Source\ObjectFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\InputFile\Mouse.cpp">
+      <Filter>Source\InputFile</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
