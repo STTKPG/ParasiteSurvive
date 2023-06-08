@@ -13,8 +13,9 @@ public:
 		Entity
 	};
 public:
-	ObjectBase(ObjectType type,VECTOR pos = VGet(0, 0, 0)):
+	ObjectBase(ObjectType type,VECTOR pos = VGet(0, 0, 0),VECTOR rotate = VGet(0,0,0)):
 	Pos(pos),
+	Rotate(rotate),
 	Is_Alive(false),
 	Type(type){}
 	~ObjectBase() {}
@@ -25,6 +26,7 @@ public:
 
 public:
 	VECTOR Pos;
+	VECTOR Rotate;
 	ObjectType Type;
 	bool Is_Alive;
 	int Hp;

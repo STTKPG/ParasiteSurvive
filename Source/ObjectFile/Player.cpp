@@ -1,5 +1,5 @@
 #include "Player.h"
-
+#include "../Source/InputFile/Mouse.h"
 
 void Player::Update()
 {
@@ -19,6 +19,8 @@ void Player::Update()
 	{
 		Pos.x--;
 	}
+
+	
 }
 
 void Player::Draw()
@@ -26,3 +28,10 @@ void Player::Draw()
 
 }
 
+void Player::PlayerVector()
+{
+	VECTOR MousePointer;
+	Mouse::Instance()->GetMousePointer(&MousePointer);
+	
+	
+}

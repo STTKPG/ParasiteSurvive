@@ -10,9 +10,11 @@ bool Mouse::GetMousePointer(VECTOR *mousevector)
 		return false;
 	}
 
-	XBuffer = 100 - XBuffer;
-	YBuffer = 100 - YBuffer;
+	XBuffer = 320 - XBuffer;
+	YBuffer = 240 - YBuffer;//マジックナンバーを後々修正加える事
 
 	*mousevector = VGet(-XBuffer, -YBuffer, 0);
-	SetMousePoint(100, 100);
+	SetMousePoint(320, 240);
+
+	return true;
 }

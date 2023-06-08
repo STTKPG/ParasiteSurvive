@@ -8,9 +8,18 @@ class Player : public ObjectBase
 public:
 	~Player(){}
 
+public:
+	VECTOR GetRotate()
+	{
+		return Rotate;
+	}
 protected:
 	void Draw()override;
 	void Update()override;
+
+private:
+	void PlayerVector();
+
 };
 
 #endif // !PLAYER_H
