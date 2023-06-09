@@ -27,11 +27,3 @@ void Player::Draw()
 {
 
 }
-
-void Player::PlayerVector()
-{
-	VECTOR MousePointer;
-	Mouse::Instance()->GetMousePointer(&MousePointer);
-	
-	
-}
