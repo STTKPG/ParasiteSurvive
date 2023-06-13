@@ -15,6 +15,9 @@ Scene::SceneKind SceneManager::Run()
 	default:
 		break;
 	}
+<<<<<<< HEAD
 
 	return Scene::SceneKind::Test;
+=======
+>>>>>>> b887115ce6db1be974691ba5cfe31353631656af
 }
