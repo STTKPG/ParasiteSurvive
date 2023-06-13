@@ -11,13 +11,13 @@ public:
 		static SceneFactory instance;
 		return &instance;
 	}
-	~SceneFactory(){}
-	
+	~SceneFactory() {}
+
 public:
 	void CreateScene(Scene::SceneKind next);
 private:
-	SceneFactory(){}
-	SceneFactory(const SceneFactory &obj){}
+	SceneFactory() {}
+	SceneFactory(const SceneFactory& obj) {}
 };
 
 #endif // !SCENEFACTORY_H

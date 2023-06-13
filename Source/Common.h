@@ -9,7 +9,8 @@ namespace Scene
 		Title,
 		Main,
 		Over,
-		Clear
+		Clear,
+		Test
 	};
 }
 #endif // !COMMON_H

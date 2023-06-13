@@ -11,7 +11,7 @@ public:
 		SetCameraNearFar(Near, Far);
 		SetCameraPositionAndTargetAndUpVec(Pos, Target, VGet(0, 1, 0));
 	}
-	~Camera(){}
+	~Camera() {}
 
 public:
 	void SetTarget(VECTOR target);

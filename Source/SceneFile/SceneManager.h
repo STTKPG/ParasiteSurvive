@@ -26,6 +26,7 @@ public:
 	Scene::SceneKind Run();
 
 private:
+	SceneManager(){}
 	SceneManager(const SceneManager& Ins) = delete;
 
 private:

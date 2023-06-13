@@ -27,7 +27,7 @@ void ObjectManager::Draw()
 {
 	for (ObjectBase* Obj : Objects)
 	{
-		if (Obj->Is_Alive == true) 
+		if (Obj->Is_Alive == true)
 		{
 			Obj->Draw();
 		}
@@ -42,7 +42,7 @@ void ObjectManager::Erase()
 		{
 			delete (*itr);
 			*itr = nullptr;
-			itr = Objects.erase(itr);	
+			itr = Objects.erase(itr);
 		}
 		else
 		{

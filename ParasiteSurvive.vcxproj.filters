@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\SceneFile\SceneFactory.h">
-      <Filter>Source\SceneFile</Filter>
-    </ClInclude>
     <ClInclude Include="Source\SceneFile\SceneManager.h">
       <Filter>Source\SceneFile</Filter>
     </ClInclude>
@@ -30,25 +27,13 @@
     <ClInclude Include="Source\ObjectFile\ObjectBase.h">
       <Filter>Source\ObjectFile</Filter>
     </ClInclude>
-    <ClInclude Include="Source\ObjectFile\Enemy.h">
-      <Filter>Source\ObjectFile</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\ObjectFile\Bullet.h">
-      <Filter>Source\ObjectFile</Filter>
-    </ClInclude>
     <ClInclude Include="Source\ObjectFile\Player.h">
       <Filter>Source\ObjectFile</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Camera.h">
-      <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="Source\ObjectFile\ObjectManager.h">
       <Filter>Source\ObjectFile</Filter>
     </ClInclude>
     <ClInclude Include="Source\ObjectFile\ObjectFactory.h">
-      <Filter>Source\ObjectFile</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\ObjectFile\TargetObject.h">
       <Filter>Source\ObjectFile</Filter>
     </ClInclude>
     <ClInclude Include="Source\ObjectFile\Floor.h">
@@ -66,25 +51,22 @@
     <ClInclude Include="Source\SceneFile\TestScene.h">
       <Filter>Source\SceneFile</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Camera.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SceneFile\SceneFactory.h">
+      <Filter>Source\SceneFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ObjectFile\TargetObject.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\SceneFile\SceneFactory.cpp">
-      <Filter>Source\SceneFile</Filter>
-    </ClCompile>
     <ClCompile Include="Source\ObjectFile\Player.cpp">
       <Filter>Source\ObjectFile</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Camera.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\ObjectFile\ObjectManager.cpp">
-      <Filter>Source\ObjectFile</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\ObjectFile\ObjectFactory.cpp">
-      <Filter>Source\ObjectFile</Filter>
     </ClCompile>
     <ClCompile Include="Source\ObjectFile\TargetObject.cpp">
       <Filter>Source\ObjectFile</Filter>
@@ -100,6 +82,15 @@
     </ClCompile>
     <ClCompile Include="Source\SceneFile\SceneManager.cpp">
       <Filter>Source\SceneFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Camera.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneFile\SceneFactory.cpp">
+      <Filter>Source\SceneFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ObjectFile\ObjectManager.cpp">
+      <Filter>Source\ObjectFile</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

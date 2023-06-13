@@ -6,8 +6,8 @@
 class TargetObject : public ObjectBase
 {
 public:
-	~TargetObject(){}
-	
+	~TargetObject() {}
+
 	void Update();
 	void Draw();
 };
