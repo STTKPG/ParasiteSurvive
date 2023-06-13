@@ -34,6 +34,8 @@
     <ClInclude Include="Source\SceneFile\SceneBase.h" />
     <ClInclude Include="Source\SceneFile\SceneFactory.h" />
     <ClInclude Include="Source\SceneFile\SceneManager.h" />
+    <ClInclude Include="Source\SceneFile\TestScene.h" />
+    <ClInclude Include="Source\SceneFile\TitleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -46,6 +48,7 @@
     <ClCompile Include="Source\ObjectFile\Player.cpp" />
     <ClCompile Include="Source\ObjectFile\TargetObject.cpp" />
     <ClCompile Include="Source\SceneFile\SceneFactory.cpp" />
+    <ClCompile Include="Source\SceneFile\SceneManager.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

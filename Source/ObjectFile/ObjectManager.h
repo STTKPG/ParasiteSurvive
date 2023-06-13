@@ -30,6 +30,7 @@ private:
 		Objects.clear();
 	}
 	ObjectManager(ObjectManager& Ins) = delete;
+
 private:
 	std::list<ObjectBase*> Objects;
 

@@ -7,8 +7,8 @@ public:
 	SceneBase(){}
 	virtual ~SceneBase(){}
 
-private:
-
+public:
+	void Run();
 };
 
 #endif // !

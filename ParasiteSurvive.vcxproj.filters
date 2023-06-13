@@ -60,6 +60,12 @@
     <ClInclude Include="Source\InputFile\Mouse.h">
       <Filter>Source\InputFile</Filter>
     </ClInclude>
+    <ClInclude Include="Source\SceneFile\TitleScene.h">
+      <Filter>Source\SceneFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SceneFile\TestScene.h">
+      <Filter>Source\SceneFile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\SceneFile\SceneFactory.cpp">
@@ -91,6 +97,9 @@
     </ClCompile>
     <ClCompile Include="Source\InputFile\Mouse.cpp">
       <Filter>Source\InputFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneFile\SceneManager.cpp">
+      <Filter>Source\SceneFile</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

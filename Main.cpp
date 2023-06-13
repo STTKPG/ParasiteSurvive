@@ -57,8 +57,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		TargetPos = VAdd(VScale(VTransform(VGet(0, 0, 1) , MMult(Test , Test2)), 0.1),TargetPos);*/
 		//TargetPos = VScale(TargetPos, 3);
 
-		VTransform(Horizontal)
-		SetCameraPositionAndTargetAndUpVec(VGet(0, 0, 0), TargetPos, VGet(0, 1, 0));
 		ClearDrawScreen();
 		MV1DrawModel(Hundle);
 		ScreenFlip();
