@@ -86,11 +86,11 @@
     <ClCompile Include="Source\Camera.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Source\SceneFile\SceneFactory.cpp">
-      <Filter>Source\SceneFile</Filter>
-    </ClCompile>
     <ClCompile Include="Source\ObjectFile\ObjectManager.cpp">
       <Filter>Source\ObjectFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneFile\SceneFactory.cpp">
+      <Filter>Source\SceneFile</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
