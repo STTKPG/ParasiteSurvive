@@ -15,6 +15,10 @@ void ModelManager::LoadModel(Scene::SceneKind Type)
 		break;
 	case Scene::SceneKind::Clear:
 		break;
+	case Scene::SceneKind::Test:
+		ModelData.insert(std::make_pair("WallStandardModel", MV1LoadModel("ModelData/Wall.mv1")));
+		ModelData.insert(std::make_pair("FloorStandardModel", MV1LoadModel("modelData/Floor_Standard.mv1")));
+		break;
 	default:
 		break;
 	}

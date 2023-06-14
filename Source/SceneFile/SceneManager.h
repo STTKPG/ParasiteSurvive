@@ -24,11 +24,17 @@ public:
 public:
 	~SceneManager(){}
 	Scene::SceneKind Run();
+	Scene::SceneKind ReturnCurrentScene()
+	{
+		return CurrentScene;
+	}
 
 private:
 	SceneManager(){}
 	SceneManager(const SceneManager& Ins) = delete;
 
+public:
+	Scene::SceneKind CurrentScene;
 private:
 	SceneStep CurrentStep;
 

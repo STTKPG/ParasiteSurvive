@@ -92,5 +92,8 @@
     <ClCompile Include="Source\SceneFile\SceneFactory.cpp">
       <Filter>Source\SceneFile</Filter>
     </ClCompile>
+    <ClCompile Include="Source\SceneFile\TestScene.cpp">
+      <Filter>Source\SceneFile</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -46,6 +46,7 @@
     <ClCompile Include="Source\ObjectFile\TargetObject.cpp" />
     <ClCompile Include="Source\SceneFile\SceneFactory.cpp" />
     <ClCompile Include="Source\SceneFile\SceneManager.cpp" />
+    <ClCompile Include="Source\SceneFile\TestScene.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
