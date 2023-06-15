@@ -10,7 +10,8 @@ public:
 	{
 		Player,
 		Enemy,
-		Entity
+		Entity,
+		Test
 	};
 public:
 	ObjectBase(ObjectType type,VECTOR pos = VGet(0, 0, 0),VECTOR rotate = VGet(0,0,0)):
@@ -22,7 +23,7 @@ public:
 
 public:
 	virtual void Update() = 0;
-	virtual void Draw() = 0;
+	virtual void Draw(int modeldata) = 0;
 
 public:
 	VECTOR Pos;

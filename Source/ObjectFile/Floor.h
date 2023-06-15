@@ -10,7 +10,7 @@ public:
 
 public:
 	void Update()override;
-	void Draw()override;
+	void Draw(int modeldata)override;
 
 };
 

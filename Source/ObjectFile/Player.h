@@ -14,7 +14,7 @@ public:
 		return Rotate;
 	}
 protected:
-	void Draw()override;
+	void Draw(int modeldata)override;
 	void Update()override;
 
 private:

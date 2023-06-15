@@ -23,6 +23,7 @@ public:
 	void Draw();
 	void Erase();
 	void EraseAll();
+	std::list<ObjectBase*> GetObjectDate(ObjectBase::ObjectType type);
 
 private:
 	ObjectManager()

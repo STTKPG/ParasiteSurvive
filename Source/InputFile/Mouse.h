@@ -21,7 +21,7 @@ private:
 	Mouse(Mouse& Ins) = delete;
 
 public:
-	bool GetMousePointer(VECTOR* mousevector);
+	bool GetMousePointerVec(VECTOR* mousevector);
 
 private:
 	int ScreenSize_X;

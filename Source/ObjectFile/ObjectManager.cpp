@@ -1,4 +1,5 @@
 #include "ObjectManager.h"
+#include "ModelManager.h"
 
 bool ObjectManager::Entry(ObjectBase* Obj)
 {
@@ -29,7 +30,7 @@ void ObjectManager::Draw()
 	{
 		if (Obj->Is_Alive == true)
 		{
-			Obj->Draw();
+			Obj->Draw(ModelManager::Instance()->SetModelData(Obj->Type));
 		}
 	}
 }
@@ -62,4 +63,18 @@ void ObjectManager::EraseAll()
 
 	Objects.clear();
 
+}
+
+ std::list<ObjectBase*> ObjectManager::GetObjectDate(ObjectBase::ObjectType type)
+{
+	 std::list<ObjectBase*> RequObjList;
+	for (auto itr = Objects.begin(); itr != Objects.end(); itr++)
+	{
+		if ((*itr)->Type == type)
+		{
+			RequObjList.push_back(*itr);
+		}
+	}
+
+	return RequObjList;
 }

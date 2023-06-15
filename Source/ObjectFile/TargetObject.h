@@ -6,10 +6,17 @@
 class TargetObject : public ObjectBase
 {
 public:
+	TargetObject(ObjectType type) :ObjectBase(type,VGet(200,0,0))
+	{
+
+	}
 	~TargetObject() {}
 
 	void Update();
-	void Draw();
+	void Draw(int modeldata);
+
+private:
+	
 };
 
 #endif // !TARGETOBJECT_H

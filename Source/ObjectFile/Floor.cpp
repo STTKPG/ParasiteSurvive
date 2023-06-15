@@ -5,7 +5,7 @@ void Floor::Update()
 	
 }
 
-void Floor::Draw()
+void Floor::Draw(int modeldata)
 {
 	
 }

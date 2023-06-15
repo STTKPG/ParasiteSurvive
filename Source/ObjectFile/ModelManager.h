@@ -4,6 +4,7 @@
 #include <map>
 #include <string>
 #include "..\Common.h"
+#include "ObjectBase.h"
 class ModelManager
 {
 public:
@@ -17,8 +18,8 @@ public:
 	~ModelManager(){}
 
 	void LoadModel(Scene::SceneKind Type);
-	int SetModelData(std::string modelname);
-	void Deletemodel(std::string modelname);
+	int SetModelData(ObjectBase::ObjectType type);
+	void Deletemodel(ObjectBase::ObjectType type);
 	void AllDeleteModel();
 
 private:
@@ -26,7 +27,7 @@ private:
 	ModelManager(ModelManager& Ins) = delete;
 
 private:
-	std::map<std::string, int> ModelData;
+	std::map<ObjectBase::ObjectType, int> ModelData;
 };
 
 #endif // !MODELMANAGER_H
