@@ -11,11 +11,12 @@ void TargetObject::Update()
 	VECTOR MousePointerVec;
 	Mouse::Instance()->GetMousePointerVec(&MousePointerVec);
 	RequObject = ObjectManager::Instance()->GetObjectDate(ObjectType::Player);
-	RotaMatX = MGetRotX(DX_PI_F / MousePointerVec.y);
+	float Xrad = DX_PI_F / MousePointerVec.x
+	RotaMatX = MGetRotX();
 	RotaMatY = MGetRotY(DX_PI_F / MousePointerVec.x);
 	RotaMat = MMult(RotaMatX,RotaMatY);
 	
-	Pos = VTransform(Pos, RotaMat);
+	Pos = VTransform(Pos, RotaMatY);
 
 }
 

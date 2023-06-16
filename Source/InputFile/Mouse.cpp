@@ -2,6 +2,11 @@
 
 bool Mouse::GetMousePointerVec(VECTOR *mousevector)
 {
+	int ScrSizX;
+	int ScrSizY;
+	int ColBitDep;
+	GetScreenState(&ScrSizX, &ScrSizY, &ColBitDep);
+	
 	int XBuffer;
 	int YBuffer;
 	
@@ -10,8 +15,8 @@ bool Mouse::GetMousePointerVec(VECTOR *mousevector)
 		return false;
 	}
 
-	XBuffer = (XBuffer - 320) / 10;
-	YBuffer = (YBuffer - 240) / 10;//マジックナンバーを後々修正加える事
+	XBuffer = (XBuffer - (ScrSizX / 2));
+	YBuffer = (YBuffer - (ScrSizY / 2));//マジックナンバーを後々修正加える事
 	
 	*mousevector = VGet(-XBuffer, -YBuffer, 0);
 	SetMousePoint(320, 240);

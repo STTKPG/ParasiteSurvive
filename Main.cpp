@@ -15,7 +15,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	ObjectBase* tage = new TargetObject(ObjectBase::ObjectType::Test,VGet(1,0,0));
 	ObjectBase* barrel = new Barrel(ObjectBase::Barrel,VGet(100,0,0));
-
+	SetMousePoint(320, 240);
 	SetDrawScreen(DX_SCREEN_BACK);
 	SetUseLighting(FALSE);
 	SetUseZBuffer3D(TRUE);
