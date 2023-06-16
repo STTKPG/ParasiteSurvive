@@ -18,6 +18,7 @@ void ModelManager::LoadModel(Scene::SceneKind Type)
 	case Scene::SceneKind::Test:
 		ModelData.insert(std::make_pair(ObjectBase::ObjectType::Test, MV1LoadModel("ModelData/Wall.mv1")));
 		ModelData.insert(std::make_pair(ObjectBase::ObjectType::Entity, MV1LoadModel("modelData/Floor_Standard.mv1")));
+		ModelData.insert(std::make_pair(ObjectBase::ObjectType::Barrel, MV1LoadModel("modelData/Barrel.mv1")));
 		break;
 	default:
 		break;

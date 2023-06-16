@@ -60,6 +60,9 @@
     <ClInclude Include="Source\ObjectFile\TargetObject.h">
       <Filter>Source\ObjectFile</Filter>
     </ClInclude>
+    <ClInclude Include="Source\ObjectFile\Barrel.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\ObjectFile\Player.cpp">
@@ -94,6 +97,9 @@
     </ClCompile>
     <ClCompile Include="Source\SceneFile\TestScene.cpp">
       <Filter>Source\SceneFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ObjectFile\Barrel.cpp">
+      <Filter>Source\ObjectFile</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

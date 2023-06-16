@@ -22,6 +22,7 @@
     <ClInclude Include="Source\Camera.h" />
     <ClInclude Include="Source\Common.h" />
     <ClInclude Include="Source\InputFile\Mouse.h" />
+    <ClInclude Include="Source\ObjectFile\Barrel.h" />
     <ClInclude Include="Source\ObjectFile\Floor.h" />
     <ClInclude Include="Source\ObjectFile\ModelManager.h" />
     <ClInclude Include="Source\ObjectFile\ObjectBase.h" />
@@ -39,6 +40,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Source\Camera.cpp" />
     <ClCompile Include="Source\InputFile\Mouse.cpp" />
+    <ClCompile Include="Source\ObjectFile\Barrel.cpp" />
     <ClCompile Include="Source\ObjectFile\Floor.cpp" />
     <ClCompile Include="Source\ObjectFile\ModelManager.cpp" />
     <ClCompile Include="Source\ObjectFile\ObjectManager.cpp" />

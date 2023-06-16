@@ -6,14 +6,14 @@
 class TargetObject : public ObjectBase
 {
 public:
-	TargetObject(ObjectType type) :ObjectBase(type,VGet(200,0,0))
+	TargetObject(ObjectType type,VECTOR pos) :ObjectBase(type,pos)
 	{
 
 	}
 	~TargetObject() {}
 
 	void Update();
-	void Draw(int modeldata);
+	//void Draw(int modeldata);
 
 private:
 	
