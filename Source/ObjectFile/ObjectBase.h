@@ -12,13 +12,14 @@ public:
 		Enemy,
 		Entity,
 		Test,
-		Barrel
+		Barrel,
+		Target
 	};
 public:
 	ObjectBase(ObjectType type,VECTOR pos = VGet(0, 0, 0),VECTOR rotate = VGet(0,0,0)):
 	Pos(pos),
 	Rotate(rotate),
-	Is_Alive(false),
+	Is_Alive(true),
 	Type(type){}
 	~ObjectBase() {}
 

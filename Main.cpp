@@ -3,6 +3,7 @@
 #include "Source/ObjectFile/TargetObject.h"
 #include "Source/ObjectFile/ObjectBase.h"
 #include "Source/ObjectFile/ModelManager.h"
+#include "Source/ObjectFile/ObjectManager.h"
 #include "Source/ObjectFile/Barrel.h"
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -13,8 +14,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		return -1;			// エラーが起きたら直ちに終了
 	}
 
-	ObjectBase* tage = new TargetObject(ObjectBase::ObjectType::Test,VGet(0,0,1));
-	ObjectBase* barrel = new Barrel(ObjectBase::Barrel,VGet(100,0,0));
+	ObjectManager::Instance()->Entry(ObjectBase::Player);
+	ObjectManager::Instance()->Entry(ObjectBase::Target);
 	SetMousePoint(320, 240);
 	SetDrawScreen(DX_SCREEN_BACK);
 	SetUseLighting(FALSE);
@@ -22,7 +23,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	SetWriteZBuffer3D(TRUE);
 	SetGraphMode(200, 200, 64);
 	SetCameraNearFar(0, 1000);
-	SetCameraPositionAndTargetAndUpVec(VGet(0, 0, 0),tage->Pos,VGet(0,1,0));
+	SetCameraPositionAndTargetAndUpVec(VGet(0, 0, 0),VGet(0,0,1), VGet(0, 1, 0));
 	ModelManager::Instance()->LoadModel(Scene::SceneKind::Test);
 	while (CheckHitKey(KEY_INPUT_RETURN) == 0)
 	{
@@ -35,11 +36,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//if (CheckHitKey(KEY_INPUT_RIGHT) == 1)
 		//{
 		//	Roll += DX_PI_F / 60.0f;
-		//}
-		tage->Update();
-		SetCameraPositionAndTargetAndUpVec(VGet(0, 0, 0), tage->Pos, VGet(0, 1, 0));
-		barrel->Draw(ModelManager::Instance()->SetModelData(barrel->Type));
-
+		//}		
+		ObjectManager::Instance()->Update();
+		SetCameraPositionAndTargetAndUpVec(ObjectManager::Instance()->GetObjectPos(ObjectBase::Player), ObjectManager::Instance()->GetObjectPos(ObjectBase::Target), VGet(0, 1, 0));
+	
 		ScreenFlip();
 		ClearDrawScreen();
 		int test = DrawSphere3D(VGet(0, 0, 10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);

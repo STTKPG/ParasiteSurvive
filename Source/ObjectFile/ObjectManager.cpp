@@ -1,8 +1,10 @@
 #include "ObjectManager.h"
 #include "ModelManager.h"
+#include "ObjectFactory.h"
 
-bool ObjectManager::Entry(ObjectBase* Obj)
+bool ObjectManager::Entry(ObjectBase::ObjectType type)
 {
+	ObjectBase* Obj = ObjectFactory::Create(type);
 	if (Obj == nullptr)
 	{
 		return false;
@@ -65,7 +67,7 @@ void ObjectManager::EraseAll()
 
 }
 
- std::list<ObjectBase*> ObjectManager::GetObjectDate(ObjectBase::ObjectType type)
+ std::list<ObjectBase*> ObjectManager::GetObjectsDate(ObjectBase::ObjectType type)
 {
 	 std::list<ObjectBase*> RequObjList;
 	for (auto itr = Objects.begin(); itr != Objects.end(); itr++)

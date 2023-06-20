@@ -6,6 +6,10 @@
 class Player : public ObjectBase
 {
 public:
+	Player(ObjectType type) : ObjectBase(type)
+	{
+
+	}
 	~Player(){}
 
 public:
@@ -18,8 +22,6 @@ protected:
 	void Update()override;
 
 private:
-	void PlayerVector();
-
 };
 
 #endif // !PLAYER_H

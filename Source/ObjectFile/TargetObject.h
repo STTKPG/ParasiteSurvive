@@ -6,7 +6,7 @@
 class TargetObject : public ObjectBase
 {
 public:
-	TargetObject(ObjectType type,VECTOR pos) :ObjectBase(type,pos)
+	TargetObject(ObjectType type,VECTOR pos = VGet(0,0,1)) :ObjectBase(type,pos)
 	{
 
 	}
