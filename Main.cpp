@@ -13,7 +13,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		return -1;			// エラーが起きたら直ちに終了
 	}
 
-	ObjectBase* tage = new TargetObject(ObjectBase::ObjectType::Test,VGet(1,0,0));
+	ObjectBase* tage = new TargetObject(ObjectBase::ObjectType::Test,VGet(0,0,1));
 	ObjectBase* barrel = new Barrel(ObjectBase::Barrel,VGet(100,0,0));
 	SetMousePoint(320, 240);
 	SetDrawScreen(DX_SCREEN_BACK);
@@ -42,7 +42,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 		ScreenFlip();
 		ClearDrawScreen();
-		int test = DrawSphere3D(VGet(10, 0, 0), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+		int test = DrawSphere3D(VGet(0, 0, 10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
 
 	
 		//tage->Draw(ModelManager::Instance()->SetModelData(tage->Type));

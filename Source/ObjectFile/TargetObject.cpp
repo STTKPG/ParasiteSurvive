@@ -4,6 +4,7 @@
 
 void TargetObject::Update()
 {
+	VECTOR TargetVec = VGet(0, 0, 1);
 	MATRIX RotaMatX;
 	MATRIX RotaMatY;
 	MATRIX RotaMat;
@@ -19,8 +20,7 @@ void TargetObject::Update()
   	RotaMatY = MGetRotY((MousePointerVec.y) * (DX_PI / 180));
 	
 	RotaMat = MMult(RotaMatY, RotaMatX);
-	Pos = VTransform(Pos, ScaMat);
-
+	Pos = VTransform(Pos, RotaMat);
 }
 
 //void TargetObject::Draw(int modeldata)
