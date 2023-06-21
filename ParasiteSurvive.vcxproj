@@ -22,6 +22,7 @@
     <ClInclude Include="Source\Camera.h" />
     <ClInclude Include="Source\Common.h" />
     <ClInclude Include="Source\InputFile\Mouse.h" />
+    <ClInclude Include="Source\Matrix.h" />
     <ClInclude Include="Source\ObjectFile\Barrel.h" />
     <ClInclude Include="Source\ObjectFile\Floor.h" />
     <ClInclude Include="Source\ObjectFile\ModelManager.h" />

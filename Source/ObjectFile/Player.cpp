@@ -13,11 +13,11 @@ void Player::Update()
 	}
 	if (CheckHitKey(KEY_INPUT_A) == 1)
 	{
-		Pos.x++;
+		Pos.x--;
 	}
 	if (CheckHitKey(KEY_INPUT_D) == 1)
 	{
-		Pos.x--;
+		Pos.x++;
 	}
 
 	
