@@ -67,7 +67,7 @@ public:
 	}
 	VECTOR Zvec()
 	{
-		return VTransform(VGet(0, 0, 1),MMult(this->Mat,MGetTranslate(VTransform(VGet(0, 0, 0), this->Mat))));
+		return VTransform(VGet(0, 0, 1),/*MMult(this->Mat,MGetTranslate(VTransform(VGet(0, 0, 0), this->Mat)))*/this->Mat);
 	}
 
 public:

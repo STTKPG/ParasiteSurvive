@@ -7,5 +7,7 @@ void Camera::SetTarget(VECTOR target)
 
 void Camera::SetPositionAndTarget(VECTOR pos, VECTOR target)
 {
-	SetCameraPositionAndTargetAndUpVec(pos, target, VGet(0, 1, 0));
+	Pos = pos;
+	Target = target;
+	SetCameraPositionAndTargetAndUpVec(Pos, Target, VGet(0, 1, 0));
 }

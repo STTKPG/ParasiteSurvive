@@ -1,4 +1,9 @@
 今の問題点
 Targetの位置が０，０，１から変動しない
 恐らく問題点の解決法はMatrixクラスに起因するもの
+保持関係に問題ありか、
+TargetオブジェクトのPosとCameraのPosは別であるため同じで考えてはいけない
+CameraのPosとplayerのPosはほぼ同じ
+CameraのPosとTargetのPosは別物
+TargetObjectがやるべきことは回転である
 Cameraクラスを組み込んだ際にバグ発生改修すること

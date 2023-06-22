@@ -6,7 +6,7 @@
 class TargetObject : public ObjectBase
 {
 public:
-	TargetObject(ObjectType type,VECTOR pos = VGet(0,0,1)) :ObjectBase(type,pos)
+	TargetObject(ObjectType type,VECTOR pos = VGet(0,0,1),VECTOR rotate = VGet(0,0,1)) :ObjectBase(type,pos,rotate)
 	{
 
 	}
@@ -14,8 +14,6 @@ public:
 
 	void Update();
 	//void Draw(int modeldata);
-
-private:
 
 	
 };
