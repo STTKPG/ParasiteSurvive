@@ -7,7 +7,7 @@
 class Player : public ObjectBase
 {
 public:
-	Player(ObjectType type) : ObjectBase(type)
+	Player(ObjectType type,bool is_draw) : ObjectBase(type,is_draw)
 	{
 
 	}
@@ -19,7 +19,6 @@ public:
 		return Rotate;
 	}
 protected:
-	void Draw(int modeldata)override;
 	void Update()override;
 	void GetTargetRotate()
 	{

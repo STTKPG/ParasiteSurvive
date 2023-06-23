@@ -10,16 +10,16 @@ public:
 	{
 		Player,
 		Enemy,
-		Entity,
-		Test,
+		Floor,
 		Barrel,
 		Target
 	};
 public:
-	ObjectBase(ObjectType type,VECTOR pos = VGet(0, 0, 0),VECTOR rotate = VGet(0,0,0)):
+	ObjectBase(ObjectType type,bool is_draw,VECTOR pos = VGet(0, 0, 0),VECTOR rotate = VGet(0,0,0)):
 	Pos(pos),
 	Rotate(rotate),
 	Is_Alive(true),
+	Is_Draw(is_draw),
 	Type(type){}
 	~ObjectBase() {}
 
@@ -36,6 +36,7 @@ public:
 	VECTOR Rotate;
 	ObjectType Type;
 	bool Is_Alive;
+	bool Is_Draw;
 	int Hp;
 
 };

@@ -13,21 +13,18 @@ void Player::Update()
 	}
 	if (CheckHitKey(KEY_INPUT_S) == 1)
 	{
-
+		Pos = VSub(Pos, Rotate);
 	}
 	if (CheckHitKey(KEY_INPUT_A) == 1)
 	{
-
+		Pos.x -= Rotate.z;
+		Pos.z += Rotate.x;
 	}
 	if (CheckHitKey(KEY_INPUT_D) == 1)
 	{
-
+		Pos.x += Rotate.z;
+		Pos.z -= Rotate.x;
 	}
 
 	
-}
-
-void Player::Draw(int modeldata)
-{
-
 }

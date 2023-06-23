@@ -15,8 +15,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		return -1;			// エラーが起きたら直ちに終了
 	}
 
-	ObjectManager::Instance()->Entry(ObjectBase::Player);
-	ObjectManager::Instance()->Entry(ObjectBase::Target);
+	ObjectManager::Instance()->Entry(ObjectBase::Player,VGet(5,5,5));
+	ObjectManager::Instance()->Entry(ObjectBase::Target,VGet(5,5,5));
 	SetMousePoint(320, 240);
 	SetDrawScreen(DX_SCREEN_BACK);
 	//SetUseLighting(FALSE);

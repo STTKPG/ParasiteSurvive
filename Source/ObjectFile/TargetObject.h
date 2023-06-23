@@ -6,16 +6,13 @@
 class TargetObject : public ObjectBase
 {
 public:
-	TargetObject(ObjectType type,VECTOR pos = VGet(0,0,1),VECTOR rotate = VGet(0,0,1)) :ObjectBase(type,pos,rotate)
+	TargetObject(ObjectType type,bool is_draw,VECTOR pos = VGet(0,0,1),VECTOR rotate = VGet(0,0,1)) :ObjectBase(type,is_draw,pos,rotate)
 	{
 
 	}
 	~TargetObject() {}
 
 	void Update();
-	//void Draw(int modeldata);
-
-	
 };
 
 #endif // !TARGETOBJECT_H

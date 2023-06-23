@@ -2,9 +2,9 @@
 #include "ModelManager.h"
 #include "ObjectFactory.h"
 
-bool ObjectManager::Entry(ObjectBase::ObjectType type)
+bool ObjectManager::Entry(ObjectBase::ObjectType type,VECTOR pos)
 {
-	ObjectBase* Obj = ObjectFactory::Create(type);
+	ObjectBase* Obj = ObjectFactory::Create(type,pos);
 	if (Obj == nullptr)
 	{
 		return false;
@@ -30,7 +30,7 @@ void ObjectManager::Draw()
 {
 	for (ObjectBase* Obj : Objects)
 	{
-		if (Obj->Is_Alive == true)
+		if (Obj->Is_Draw == true)
 		{
 			Obj->Draw(ModelManager::Instance()->SetModelData(Obj->Type));
 		}

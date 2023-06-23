@@ -14,8 +14,8 @@ void TargetObject::Update()
 
 	Mouse::Instance()->GetMousePointerVec(&MousePointerVec);
 	
-	RotaX.RotateX((MousePointerVec.y) * (DX_PI / 180) * 0.01);
-	RotaY.RotateY((MousePointerVec.x) * (DX_PI / 180) * 0.01);
+	RotaX.RotateX((MousePointerVec.y) * (DX_PI / 180) * 0.1);
+	RotaY.RotateY((MousePointerVec.x) * (DX_PI / 180) * 0.1);
 	Mat = RotaX * RotaY * Move;
 	
 	Rotate = VTransform(Rotate, Mat.Mat);

@@ -6,12 +6,14 @@
 class Floor : public ObjectBase
 {
 public:
+	Floor(ObjectType type,bool is_draw, VECTOR pos) :ObjectBase(type,is_draw, pos)
+	{
+
+	}
 	~Floor(){}
 
 public:
 	void Update()override;
-	void Draw(int modeldata)override;
-
 };
 
 #endif // !FLOOR_H
