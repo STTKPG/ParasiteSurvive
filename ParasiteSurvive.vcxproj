@@ -37,6 +37,7 @@
     <ClInclude Include="Source\SceneFile\SceneManager.h" />
     <ClInclude Include="Source\SceneFile\TestScene.h" />
     <ClInclude Include="Source\SceneFile\TitleScene.h" />
+    <ClInclude Include="Source\Vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
