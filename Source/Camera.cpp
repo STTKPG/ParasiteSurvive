@@ -1,4 +1,7 @@
 #include "Camera.h"
+#include "Matrix.h"
+#include "Vector.h"
+#include "Quaternion.h" 
 
 void Camera::SetTarget(VECTOR target)
 {
@@ -11,3 +14,5 @@ void Camera::SetPositionAndTarget(VECTOR pos, VECTOR target)
 	Target = target;
 	SetCameraPositionAndTargetAndUpVec(Pos, Target, VGet(0, 1, 0));
 }
+
+void 
