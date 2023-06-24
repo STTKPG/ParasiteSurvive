@@ -13,6 +13,9 @@ public:
 	~TargetObject() {}
 
 	void Update();
+
+private:
+	VECTOR OldPlayerPos;
 };
 
 #endif // !TARGETOBJECT_H

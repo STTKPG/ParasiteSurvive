@@ -14,10 +14,11 @@ void TargetObject::Update()
 
 	Mouse::Instance()->GetMousePointerVec(&MousePointerVec);
 	
+	Move.Translate(ObjectManager::Instance()->GetObjectPos(Player));
 	RotaX.RotateX((MousePointerVec.y) * (DX_PI / 180) * 0.1);
 	RotaY.RotateY((MousePointerVec.x) * (DX_PI / 180) * 0.1);
-	Mat = RotaX * RotaY * Move;
-	
+	Mat = RotaY * RotaX;
+
 	Rotate = VTransform(Rotate, Mat.Mat);
 	
 	Pos = VAdd(Rotate, ObjectManager::Instance()->GetObjectPos(Player));

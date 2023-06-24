@@ -6,7 +6,7 @@
 class Barrel : public ObjectBase
 {
 public:
-	Barrel(ObjectBase::ObjectType type, VECTOR pos) :ObjectBase(type, pos)
+	Barrel(ObjectBase::ObjectType type,bool is_draw, VECTOR pos) :ObjectBase(type,is_draw, pos)
 	{
 
 	}

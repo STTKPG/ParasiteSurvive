@@ -15,8 +15,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		return -1;			// エラーが起きたら直ちに終了
 	}
 
-	ObjectManager::Instance()->Entry(ObjectBase::Player,VGet(5,5,5));
-	ObjectManager::Instance()->Entry(ObjectBase::Target,VGet(5,5,5));
+	ObjectManager::Instance()->Entry(ObjectBase::Player,VGet(0,0,0));
+	ObjectManager::Instance()->Entry(ObjectBase::Target,VGet(0,0,0));
 	SetMousePoint(320, 240);
 	SetDrawScreen(DX_SCREEN_BACK);
 	//SetUseLighting(FALSE);
@@ -43,6 +43,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		ScreenFlip();
 		ClearDrawScreen();
 		int test = DrawSphere3D(VGet(0, 0, 10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+		DrawSphere3D(VGet(0, 0, -10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+
+		DrawSphere3D(VGet(10, 0, 0), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+
+		DrawSphere3D(VGet(-10, 0, 0), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
 		//DrawSphere3D(VAdd(ObjectManager::Instance()->GetObjectPos(ObjectBase::Target),VGet(0,0,10)), 1, 32, GetColor(0, 255, 0), GetColor(255, 255, 255), TRUE);
 
 	

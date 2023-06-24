@@ -66,6 +66,9 @@
     <ClInclude Include="Source\Matrix.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Quaternion.h">
+      <Filter>Source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\ObjectFile\Player.cpp">

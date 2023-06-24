@@ -53,6 +53,10 @@ public:
 	{
 		this->Mat = MGetRotZ(zaxis);
 	}
+	void RotateAxis(VECTOR rotateaxis, float rotate)
+	{
+		this->Mat = MGetRotAxis(rotateaxis, rotate);
+	}
 	void Translate(VECTOR trans)
 	{
 		this->Mat = MGetTranslate(trans);
