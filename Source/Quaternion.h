@@ -2,13 +2,23 @@
 #define QUATERNION_H
 
 #include <math.h>
-
+#include "Vector.h"
 class Quaternion
 {
 public:
-	Quaternion(float w,float x,float y,float z):
+	Quaternion(float w, float x, float y, float z) :
 	W(w),X(x),
 	Y(y),Z(z){}
+	/*Quaternion(Vector axis, float rad)
+	{
+		float HalfSin = sin(rad * 0.5f);
+		float HalfCos = cos(rad * 0.5f);
+
+		W = HalfCos;
+		X = axis.Normal().Vec.x * HalfSin;
+		Y = axis.Normal().Vec.y * HalfSin;
+		Z = axis.Normal().Vec.z * HalfSin;
+	}*/
 	~Quaternion(){}
 
 	Quaternion Conplex(Quaternion q)
@@ -25,6 +35,23 @@ public:
 
 	}
 
+	Quaternion MakeCameraQuaX(Vector axis, float rad)
+	{
+
+		float HalfSin = sin(rad * 0.5f);
+		float HalfCos = cos(rad * 0.5f);
+
+		return Quaternion(HalfCos,
+			              axis.Normal().Vec.x * HalfSin,
+			              axis.Normal().Vec.y * HalfSin,
+			              axis.Normal().Vec.z * HalfSin);
+	}
+
+	Vector RotateQuaternionPosition(Vector axis,float rad)
+	{
+		Quaternion quaternion = MakeCameraQuaX(axis, rad);
+		Quaternion conplexquaternion = 
+	}
 
 public:
 	float W;
