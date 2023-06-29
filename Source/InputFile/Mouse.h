@@ -1,7 +1,6 @@
 #ifndef MOUSE_H
 #define MOUSE_H
-#include "DxLib.h"
-
+#include "../Vector.h"
 class Mouse
 {
 public:
@@ -21,7 +20,7 @@ private:
 	Mouse(Mouse& Ins) = delete;
 
 public:
-	bool GetMousePointerVec(VECTOR* mousevector);
+	bool GetMousePointerVec(Vector* mousevector);
 
 private:
 	int ScreenSize_X;

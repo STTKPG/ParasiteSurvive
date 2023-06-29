@@ -6,6 +6,7 @@
 #include "Source/ObjectFile/ObjectManager.h"
 #include "Source/ObjectFile/Barrel.h"
 #include "Source/Camera.h"
+#include "Source/InputFile/Mouse.h"
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
@@ -25,9 +26,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	SetGraphMode(200, 200, 64);
 	ModelManager::Instance()->LoadModel(Scene::SceneKind::Test);
 	Camera camera;
+	Vector mouse(0,0,0);
+	float VRota = 0;
+	float HRota = 0;
 	while (CheckHitKey(KEY_INPUT_RETURN) == 0)
 	{
-
+		Mouse::Instance()->GetMousePointerVec(&mouse);
+		HRota += (mouse.Vec.x * 180 / DX_PI) * 0.00001f;
+		VRota += (mouse.Vec.y * 180 / DX_PI) * 0.00001f;
 		//// 左右キーでカメラの回転値を変更
 		//if (CheckHitKey(KEY_INPUT_LEFT) == 1)
 		//{
@@ -39,15 +45,17 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//}		
 		ObjectManager::Instance()->Update();
 		//SetCameraPositionAndTargetAndUpVec(ObjectManager::Instance()->GetObjectPos(ObjectBase::Player),ObjectManager::Instance()->GetObjectPos(ObjectBase::Target), VGet(0, 1, 0));
-		camera.SetPositionAndTarget(ObjectManager::Instance()->GetObjectPos(ObjectBase::Player),ObjectManager::Instance()->GetObjectPos(ObjectBase::Target));
+		//camera.SetPositionAndTarget(ObjectManager::Instance()->GetObjectPos(ObjectBase::Player),ObjectManager::Instance()->GetObjectPos(ObjectBase::Target));
+		camera.SetCameraPositionAndRotate(ObjectManager::Instance()->GetObjectPos(ObjectBase::Player).Vec,VRota,HRota);
 		ScreenFlip();
 		ClearDrawScreen();
-		int test = DrawSphere3D(VGet(0, 0, 10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
-		DrawSphere3D(VGet(0, 0, -10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+		//int test = DrawSphere3D(VGet(0, 0, 10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+		//DrawSphere3D(VGet(0, 0, -10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+	    DrawCone3D(VGet(0,-10,10), VGet(0,10,10), 5, 16, GetColor(0, 0, 255), GetColor(255, 255, 255), TRUE);
+		DrawSphere3D(VGet(0, 10, 0), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+		//DrawSphere3D(VGet(10, 0, 0), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
 
-		DrawSphere3D(VGet(10, 0, 0), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
-
-		DrawSphere3D(VGet(-10, 0, 0), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+		//DrawSphere3D(VGet(-10, 0, 0), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
 		//DrawSphere3D(VAdd(ObjectManager::Instance()->GetObjectPos(ObjectBase::Target),VGet(0,0,10)), 1, 32, GetColor(0, 255, 0), GetColor(255, 255, 255), TRUE);
 
 	

@@ -25,7 +25,7 @@ public:
 	void EraseAll();
 	std::list<ObjectBase*> GetObjectsDate(ObjectBase::ObjectType type);
  //ここの関数の融通が聞かなすぎるのでいつか改良案を出すこと
-	VECTOR GetObjectPos(ObjectBase::ObjectType type) //渡すのは同じタイプの中で一番最初に見つかったもののみ
+	Vector GetObjectPos(ObjectBase::ObjectType type) //渡すのは同じタイプの中で一番最初に見つかったもののみ
 	{
 		for (auto Itr = Objects.begin();Itr != Objects.end();Itr++)
 		{
@@ -35,7 +35,7 @@ public:
 			}
 		}
 
-		return VGet(0, 0, 0);
+		return Vector(0,0,0);
 	}
 
 private:

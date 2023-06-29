@@ -14,27 +14,12 @@ public:
 	~Player(){}
 
 public:
-	VECTOR GetRotate()
+	Vector GetRotate()
 	{
 		return Rotate;
 	}
 protected:
 	void Update()override;
-	void GetTargetRotate()
-	{
-		std::list<ObjectBase*> Requ = ObjectManager::Instance()->GetObjectsDate(Target);
-
-		for (auto Itr = Requ.begin(); Itr != Requ.end(); Itr++)
-		{
-			TargetRotate = (*Itr)->Rotate;
-		}
-	}
-	void PlayerRotate()
-	{
-		this->Rotate.x = TargetRotate.x * 1;
-		this->Rotate.y = TargetRotate.y * 0;
-		this->Rotate.z = TargetRotate.z * 1;
-	}
 
 private:
 	VECTOR TargetRotate;

@@ -9,7 +9,7 @@
 class ObjectFactory
 {
 public:
-	static ObjectBase* Create(ObjectBase::ObjectType type,VECTOR pos)
+	static ObjectBase* Create(ObjectBase::ObjectType type,Vector pos)
 	{
 		switch (type)
 		{
@@ -19,10 +19,10 @@ public:
 		case ObjectBase::Enemy:
 			break;
 		case ObjectBase::Floor:
-			return new Floor(type, true, VGet(0, 0, 0));
+			return new Floor(type, true, Vector(0,0,0));
 			break;
 		case ObjectBase::Target:
-			return new TargetObject(type,false,VGet(0,0,1));
+			return new TargetObject(type,false,Vector(0,0,0),Vector(0,0,0));
 		default:
 			break;
 		}

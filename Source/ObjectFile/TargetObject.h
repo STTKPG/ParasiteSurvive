@@ -6,7 +6,7 @@
 class TargetObject : public ObjectBase
 {
 public:
-	TargetObject(ObjectType type,bool is_draw,VECTOR pos = VGet(0,0,1),VECTOR rotate = VGet(0,0,1)) :ObjectBase(type,is_draw,pos,rotate)
+	TargetObject(ObjectType type,bool is_draw,Vector pos,Vector rotate) :ObjectBase(type,is_draw,pos,rotate)
 	{
 
 	}

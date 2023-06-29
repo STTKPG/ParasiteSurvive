@@ -16,8 +16,9 @@ public:
 
 public:
 	void SetTarget(VECTOR target);
+	void SetPositionAndTargetAndUpVec(VECTOR pos, VECTOR target, VECTOR upvec);
 	void SetPositionAndTarget(VECTOR pos, VECTOR target);
-	void Update();
+	void SetCameraPositionAndRotate(VECTOR pos, float vrota,float hrota);
 
 private:
 	int Near;

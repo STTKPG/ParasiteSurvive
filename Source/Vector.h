@@ -12,34 +12,62 @@ public:
 public:
 	Vector(float x,float y,float z) : Vec(VGet(x,y,z)){}
 	~Vector(){}
-
+	Vector(const Vector& c)
+	{
+		this->Vec.x = c.Vec.x;
+		this->Vec.y = c.Vec.y;
+		this->Vec.z = c.Vec.z;
+	}
 public:
-	Vector operator + (Vector r)
+	Vector operator + (const Vector &r) const
 	{
 		return Vector(this->Vec.x + r.Vec.x,
 			          this->Vec.y + r.Vec.y,
 			          this->Vec.z + r.Vec.z);
 	}
 
-	Vector operator - (Vector r)
+	Vector operator - (const Vector &r) const
 	{
 		return Vector(this->Vec.x - r.Vec.x,
 			          this->Vec.y - r.Vec.y,
 			          this->Vec.z - r.Vec.z);
 	}
 
-	Vector operator * (Vector r)
+	Vector operator * (const Vector &r) const
 	{
 		return Vector(this->Vec.x * r.Vec.x,
 			          this->Vec.y * r.Vec.y,
 			          this->Vec.z * r.Vec.z);
 	}
 
-	Vector operator / (Vector r)
+	Vector operator / (const Vector &r) const
 	{
 		return Vector(this->Vec.x / r.Vec.x,
 			          this->Vec.y / r.Vec.y,
 			          this->Vec.z / r.Vec.z);
+	}
+
+	Vector& operator = (const Vector& r)
+	{
+		this->Vec.x = r.Vec.x;
+		this->Vec.y = r.Vec.y;
+		this->Vec.z = r.Vec.z;
+
+		return *this;
+	}
+
+	Vector& operator += (Vector r)
+	{
+		this->Vec.x += r.Vec.x;
+		this->Vec.y += r.Vec.y;
+		this->Vec.z += r.Vec.z;
+
+		return *this;
+	}
+
+	Vector Xvec()
+	{
+		return Vector(this->Vec.x * 1, 0, 0);
 	}
 
 	Vector Normal()

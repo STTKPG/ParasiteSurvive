@@ -21,7 +21,7 @@ public:
 	}*/
 	~Quaternion(){}
 
-	Quaternion Conplex(Quaternion q)
+	Quaternion Complex(Quaternion q)
 	{
 		return Quaternion(q.W, -q.X, -q.Y, -q.Z);
 	}
@@ -47,10 +47,16 @@ public:
 			              axis.Normal().Vec.z * HalfSin);
 	}
 
-	Vector RotateQuaternionPosition(Vector axis,float rad)
+	Vector RotateQuaternionPosition(Vector axis,Vector pos,float rad)
 	{
 		Quaternion quaternion = MakeCameraQuaX(axis, rad);
-		Quaternion conplexquaternion = 
+		Quaternion ComlexQuaternion = Complex(MakeCameraQuaX(axis, rad));
+		Quaternion PosQuaternion(0, pos.Vec.x, pos.Vec.y, pos.Vec.z);
+
+		PosQuaternion = quaternion * PosQuaternion * ComlexQuaternion;
+		return Vector(PosQuaternion.X,
+			          PosQuaternion.Y,
+			          PosQuaternion.Z);
 	}
 
 public:

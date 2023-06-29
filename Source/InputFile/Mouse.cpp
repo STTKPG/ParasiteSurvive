@@ -1,6 +1,6 @@
 #include "Mouse.h"
 
-bool Mouse::GetMousePointerVec(VECTOR *mousevector)
+bool Mouse::GetMousePointerVec(Vector *mousevector)
 {
 	int ScrSizX;
 	int ScrSizY;
@@ -17,7 +17,7 @@ bool Mouse::GetMousePointerVec(VECTOR *mousevector)
 
 	float XBufferF = (XBuffer - (ScrSizX / 2));
 	float YBufferF = (YBuffer - (ScrSizY / 2));
-	*mousevector = VGet(XBufferF, YBufferF, 0);
+	mousevector->Vec = VGet(XBufferF, YBufferF, 0);
 	SetMousePoint(320, 240);
 
 	return true;
