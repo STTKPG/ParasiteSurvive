@@ -2,6 +2,10 @@
 #include "Matrix.h"
 #include "Vector.h"
 #include "Quaternion.h" 
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
 
 void Camera::SetTarget(VECTOR target)
 {
@@ -20,5 +24,6 @@ void Camera::SetPositionAndTarget(VECTOR pos, VECTOR target)
 
 void Camera::SetCameraPositionAndRotate(VECTOR pos, float vrota, float hrota)
 {
+
 	SetCameraPositionAndAngle(pos, vrota, hrota, 0);
 }

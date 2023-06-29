@@ -2,7 +2,7 @@
 #include "ModelManager.h"
 #include "ObjectFactory.h"
 
-bool ObjectManager::Entry(ObjectBase::ObjectType type,VECTOR pos)
+bool ObjectManager::Entry(ObjectBase::ObjectType type,Vector pos)
 {
 	ObjectBase* Obj = ObjectFactory::Create(type,pos);
 	if (Obj == nullptr)

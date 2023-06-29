@@ -16,8 +16,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		return -1;			// エラーが起きたら直ちに終了
 	}
 
-	ObjectManager::Instance()->Entry(ObjectBase::Player,VGet(0,0,0));
-	ObjectManager::Instance()->Entry(ObjectBase::Target,VGet(0,0,0));
+	ObjectManager::Instance()->Entry(ObjectBase::Player,Vector(0,0,0));
+	ObjectManager::Instance()->Entry(ObjectBase::Target,Vector(0,0,0));
 	SetMousePoint(320, 240);
 	SetDrawScreen(DX_SCREEN_BACK);
 	//SetUseLighting(FALSE);
@@ -31,7 +31,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	float HRota = 0;
 	while (CheckHitKey(KEY_INPUT_RETURN) == 0)
 	{
-		Mouse::Instance()->GetMousePointerVec(&mouse);
 		HRota += (mouse.Vec.x * 180 / DX_PI) * 0.00001f;
 		VRota += (mouse.Vec.y * 180 / DX_PI) * 0.00001f;
 		//// 左右キーでカメラの回転値を変更
@@ -46,7 +45,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		ObjectManager::Instance()->Update();
 		//SetCameraPositionAndTargetAndUpVec(ObjectManager::Instance()->GetObjectPos(ObjectBase::Player),ObjectManager::Instance()->GetObjectPos(ObjectBase::Target), VGet(0, 1, 0));
 		//camera.SetPositionAndTarget(ObjectManager::Instance()->GetObjectPos(ObjectBase::Player),ObjectManager::Instance()->GetObjectPos(ObjectBase::Target));
-		camera.SetCameraPositionAndRotate(ObjectManager::Instance()->GetObjectPos(ObjectBase::Player).Vec,VRota,HRota);
 		ScreenFlip();
 		ClearDrawScreen();
 		//int test = DrawSphere3D(VGet(0, 0, 10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);

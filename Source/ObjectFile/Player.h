@@ -3,6 +3,7 @@
 
 #include "ObjectBase.h"
 #include "ObjectManager.h"
+#include "../Camera.h"
 
 class Player : public ObjectBase
 {
@@ -23,6 +24,9 @@ protected:
 
 private:
 	VECTOR TargetRotate;
+	float DegreeY;
+	float DegreeXZ;
+	Camera camera;
 };
 
 #endif // !PLAYER_H

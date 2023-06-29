@@ -18,7 +18,7 @@ public:
 	}
 
 public:
-	bool Entry(ObjectBase::ObjectType type,VECTOR pos);
+	bool Entry(ObjectBase::ObjectType type,Vector pos);
 	void Update();
 	void Draw();
 	void Erase();
