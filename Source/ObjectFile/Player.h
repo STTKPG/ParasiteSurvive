@@ -8,7 +8,9 @@
 class Player : public ObjectBase
 {
 public:
-	Player(ObjectType type,bool is_draw) : ObjectBase(type,is_draw)
+	Player(ObjectType type, bool is_draw) : ObjectBase(type, is_draw)
+		, DegreeXZ(180)
+		, DegreeY(180)
 	{
 
 	}

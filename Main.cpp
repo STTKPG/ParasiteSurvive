@@ -49,11 +49,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		ClearDrawScreen();
 		//int test = DrawSphere3D(VGet(0, 0, 10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
 		//DrawSphere3D(VGet(0, 0, -10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
-	    DrawCone3D(VGet(0,-10,10), VGet(0,10,10), 5, 16, GetColor(0, 0, 255), GetColor(255, 255, 255), TRUE);
-		DrawSphere3D(VGet(0, 10, 0), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
-		//DrawSphere3D(VGet(10, 0, 0), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
-
-		//DrawSphere3D(VGet(-10, 0, 0), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+	    //DrawCone3D(VGet(0,-10,10), VGet(0,10,10), 5, 16, GetColor(0, 0, 255), GetColor(255, 255, 255), TRUE);
+		DrawSphere3D(VGet(0, 10, 0), 5, 32, GetColor(0, 255, 0), GetColor(255, 255, 255), TRUE);
+		DrawSphere3D(VGet(10, 0, 0), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+		DrawSphere3D(VGet(-10, 0, 0), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+		DrawSphere3D(VGet(0, -10, 0), 5, 32, GetColor(0, 0, 255), GetColor(255, 255, 255), TRUE);
+		DrawSphere3D(VGet(0, 0, 10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+		DrawSphere3D(VGet(0, 0, -10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
 		//DrawSphere3D(VAdd(ObjectManager::Instance()->GetObjectPos(ObjectBase::Target),VGet(0,0,10)), 1, 32, GetColor(0, 255, 0), GetColor(255, 255, 255), TRUE);
 
 	
