@@ -13,6 +13,9 @@
     <Filter Include="Source\InputFile">
       <UniqueIdentifier>{a4d6de3f-01e4-48e3-843d-2b4c0c941974}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\CollisionFile">
+      <UniqueIdentifier>{69aa86de-22ce-4300-a7eb-75c2a09141d8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\SceneFile\SceneManager.h">
@@ -72,6 +75,12 @@
     <ClInclude Include="Source\Vector.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Source\CollisionFile\CollisionManager.h">
+      <Filter>Source\CollisionFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CollisionFile\FloorCollision.h">
+      <Filter>Source\CollisionFile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\ObjectFile\Player.cpp">
@@ -109,6 +118,9 @@
     </ClCompile>
     <ClCompile Include="Source\ObjectFile\Barrel.cpp">
       <Filter>Source\ObjectFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CollisionFile\CollisionManager.cpp">
+      <Filter>Source\CollisionFile</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

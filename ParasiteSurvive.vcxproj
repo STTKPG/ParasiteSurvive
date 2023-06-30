@@ -20,6 +20,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Camera.h" />
+    <ClInclude Include="Source\CollisionFile\CollisionManager.h" />
+    <ClInclude Include="Source\CollisionFile\FloorCollision.h" />
     <ClInclude Include="Source\Common.h" />
     <ClInclude Include="Source\InputFile\Mouse.h" />
     <ClInclude Include="Source\Matrix.h" />
@@ -42,6 +44,7 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Source\Camera.cpp" />
+    <ClCompile Include="Source\CollisionFile\CollisionManager.cpp" />
     <ClCompile Include="Source\InputFile\Mouse.cpp" />
     <ClCompile Include="Source\ObjectFile\Barrel.cpp" />
     <ClCompile Include="Source\ObjectFile\Floor.cpp" />
