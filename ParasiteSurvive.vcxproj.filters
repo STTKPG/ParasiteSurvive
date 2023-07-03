@@ -81,6 +81,9 @@
     <ClInclude Include="Source\CollisionFile\FloorCollision.h">
       <Filter>Source\CollisionFile</Filter>
     </ClInclude>
+    <ClInclude Include="Source\ObjectFile\Map.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\ObjectFile\Player.cpp">

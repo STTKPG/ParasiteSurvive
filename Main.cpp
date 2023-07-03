@@ -16,8 +16,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		return -1;			// エラーが起きたら直ちに終了
 	}
 
-	ObjectManager::Instance()->Entry(ObjectBase::Player,Vector(0,0,0));
+	ObjectManager::Instance()->Entry(ObjectBase::Player,Vector(0,-200,0));
 	ObjectManager::Instance()->Entry(ObjectBase::Target,Vector(0,0,0));
+	int handle = MV1LoadModel("ModelData/Floor_Standard.mv1");
 	SetMousePoint(320, 240);
 	SetDrawScreen(DX_SCREEN_BACK);
 	//SetUseLighting(FALSE);
@@ -25,14 +26,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	SetWriteZBuffer3D(TRUE);
 	SetGraphMode(200, 200, 64);
 	ModelManager::Instance()->LoadModel(Scene::SceneKind::Test);
-	Camera camera;
-	Vector mouse(0,0,0);
-	float VRota = 0;
-	float HRota = 0;
 	while (CheckHitKey(KEY_INPUT_RETURN) == 0)
 	{
-		HRota += (mouse.Vec.x * 180 / DX_PI) * 0.00001f;
-		VRota += (mouse.Vec.y * 180 / DX_PI) * 0.00001f;
 		//// 左右キーでカメラの回転値を変更
 		//if (CheckHitKey(KEY_INPUT_LEFT) == 1)
 		//{
@@ -56,6 +51,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		DrawSphere3D(VGet(0, -10, 0), 5, 32, GetColor(0, 0, 255), GetColor(255, 255, 255), TRUE);
 		DrawSphere3D(VGet(0, 0, 10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
 		DrawSphere3D(VGet(0, 0, -10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
+
+		DrawLine3D(VGet(0, 0, 0), VGet(0, -200, 0), GetColor(255, 0, 0));
+
+		DrawLine3D(VGet(0, 0, 0), VGet(0, 0,100), GetColor(255, 0, 0));
+		MV1SetPosition(handle,VGet(0,0,0));
+		MV1DrawModel(handle);
 		//DrawSphere3D(VAdd(ObjectManager::Instance()->GetObjectPos(ObjectBase::Target),VGet(0,0,10)), 1, 32, GetColor(0, 255, 0), GetColor(255, 255, 255), TRUE);
 
 	

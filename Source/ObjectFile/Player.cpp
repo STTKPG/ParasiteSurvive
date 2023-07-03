@@ -7,8 +7,8 @@ void Player::Update()
 	Vector MouseVec(0,0,0);
 	Mouse::Instance()->GetMousePointerVec(&MouseVec);
 	
-	DegreeY += MouseVec.Vec.x;
-	DegreeXZ += MouseVec.Vec.y;
+	DegreeY += MouseVec.Vec.x * 1/10;
+	DegreeXZ += MouseVec.Vec.y * 1/10;
 	if (DegreeY >= 360)
 	{
 		DegreeY = 0;

@@ -8,7 +8,7 @@
 class Player : public ObjectBase
 {
 public:
-	Player(ObjectType type, bool is_draw) : ObjectBase(type, is_draw)
+	Player(ObjectType type,bool is_draw, Vector pos) : ObjectBase(type,is_draw,pos)
 		, DegreeXZ(180)
 		, DegreeY(180)
 	{
@@ -21,6 +21,7 @@ public:
 	{
 		return Rotate;
 	}
+	
 protected:
 	void Update()override;
 

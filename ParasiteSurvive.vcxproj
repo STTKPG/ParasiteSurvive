@@ -27,6 +27,7 @@
     <ClInclude Include="Source\Matrix.h" />
     <ClInclude Include="Source\ObjectFile\Barrel.h" />
     <ClInclude Include="Source\ObjectFile\Floor.h" />
+    <ClInclude Include="Source\ObjectFile\Map.h" />
     <ClInclude Include="Source\ObjectFile\ModelManager.h" />
     <ClInclude Include="Source\ObjectFile\ObjectBase.h" />
     <ClInclude Include="Source\ObjectFile\ObjectFactory.h" />

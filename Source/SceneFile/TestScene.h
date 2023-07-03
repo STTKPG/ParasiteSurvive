@@ -9,7 +9,7 @@ class TestScene : public SceneBase
 public:
 	TestScene()
 	{
-		ModelManager::Instance()->LoadModel()
+
 	}
 	~TestScene(){}
 

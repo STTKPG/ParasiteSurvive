@@ -14,6 +14,8 @@ public:
 
 public:
 	void Update()override;
+	void Collision();
+
 };
 
 #endif // !FLOOR_H

@@ -14,7 +14,7 @@ public:
 		switch (type)
 		{
 		case ObjectBase::Player:
-			return new Player(type,false);
+			return new Player(type,false,pos);
 			break;
 		case ObjectBase::Enemy:
 			break;
