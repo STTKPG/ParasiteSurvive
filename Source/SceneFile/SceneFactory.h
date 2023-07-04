@@ -15,6 +15,7 @@ public:
 
 public:
 	void CreateScene(Scene::SceneKind next);
+	void Run();
 private:
 	SceneFactory() {}
 	SceneFactory(const SceneFactory& obj) {}

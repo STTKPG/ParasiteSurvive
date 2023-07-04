@@ -19,6 +19,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	ObjectManager::Instance()->Entry(ObjectBase::Player,Vector(0,-200,0));
 	ObjectManager::Instance()->Entry(ObjectBase::Target,Vector(0,0,0));
 	int handle = MV1LoadModel("ModelData/Floor_Standard.mv1");
+
+	int handleW = MV1LoadModel("ModelData/Wall.mv1");
 	SetMousePoint(320, 240);
 	SetDrawScreen(DX_SCREEN_BACK);
 	//SetUseLighting(FALSE);
@@ -52,11 +54,32 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		DrawSphere3D(VGet(0, 0, 10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
 		DrawSphere3D(VGet(0, 0, -10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
 
-		DrawLine3D(VGet(0, 0, 0), VGet(0, -200, 0), GetColor(255, 0, 0));
+		//DrawLine3D(VGet(0, 0, 0), VGet(0, -200, 0), GetColor(255, 0, 0));
 
 		DrawLine3D(VGet(0, 0, 0), VGet(0, 0,100), GetColor(255, 0, 0));
 		MV1SetPosition(handle,VGet(0,0,0));
 		MV1DrawModel(handle);
+		MV1SetPosition(handle, VGet(200, 0, 0));
+		MV1DrawModel(handle);
+		MV1SetPosition(handle, VGet(0, 0, 200));
+		MV1DrawModel(handle);
+		MV1SetPosition(handle, VGet(0, 0, -200));
+		MV1DrawModel(handle);
+		MV1SetPosition(handle, VGet(-200, 0, 0));
+		MV1DrawModel(handle);
+		MV1SetPosition(handle, VGet(200, 0, 200));
+		MV1DrawModel(handle);
+		MV1SetPosition(handle, VGet(200, 0, -200));
+		MV1DrawModel(handle);
+		MV1SetPosition(handle, VGet(-200, 0, 200));
+		MV1DrawModel(handle);
+		MV1SetPosition(handle, VGet(-200, 0, -200));
+		MV1DrawModel(handle);
+
+		MV1SetPosition(handleW, VGet(0, -600, 0));
+		MV1DrawModel(handleW);
+		DrawLine3D(VGet(0, -400, 0), VGet(0, -800, 0), GetColor(255, 0, 0));
+
 		//DrawSphere3D(VAdd(ObjectManager::Instance()->GetObjectPos(ObjectBase::Target),VGet(0,0,10)), 1, 32, GetColor(0, 255, 0), GetColor(255, 255, 255), TRUE);
 
 	

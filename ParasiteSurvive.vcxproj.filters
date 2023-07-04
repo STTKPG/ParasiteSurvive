@@ -84,6 +84,9 @@
     <ClInclude Include="Source\ObjectFile\Map.h">
       <Filter>Source\ObjectFile</Filter>
     </ClInclude>
+    <ClInclude Include="Source\SceneFile\MainScene.h">
+      <Filter>Source\SceneFile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\ObjectFile\Player.cpp">
@@ -124,6 +127,9 @@
     </ClCompile>
     <ClCompile Include="Source\CollisionFile\CollisionManager.cpp">
       <Filter>Source\CollisionFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneFile\MainScene.cpp">
+      <Filter>Source\SceneFile</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

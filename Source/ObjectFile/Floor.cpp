@@ -2,8 +2,5 @@
 
 void Floor::Update()
 {
-	if ()
-	{
 
-	}
 }

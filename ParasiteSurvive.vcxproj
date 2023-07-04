@@ -35,6 +35,7 @@
     <ClInclude Include="Source\ObjectFile\Player.h" />
     <ClInclude Include="Source\ObjectFile\TargetObject.h" />
     <ClInclude Include="Source\Quaternion.h" />
+    <ClInclude Include="Source\SceneFile\MainScene.h" />
     <ClInclude Include="Source\SceneFile\SceneBase.h" />
     <ClInclude Include="Source\SceneFile\SceneFactory.h" />
     <ClInclude Include="Source\SceneFile\SceneManager.h" />
@@ -53,6 +54,7 @@
     <ClCompile Include="Source\ObjectFile\ObjectManager.cpp" />
     <ClCompile Include="Source\ObjectFile\Player.cpp" />
     <ClCompile Include="Source\ObjectFile\TargetObject.cpp" />
+    <ClCompile Include="Source\SceneFile\MainScene.cpp" />
     <ClCompile Include="Source\SceneFile\SceneFactory.cpp" />
     <ClCompile Include="Source\SceneFile\SceneManager.cpp" />
     <ClCompile Include="Source\SceneFile\TestScene.cpp" />
