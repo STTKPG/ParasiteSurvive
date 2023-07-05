@@ -16,6 +16,9 @@
     <Filter Include="Source\CollisionFile">
       <UniqueIdentifier>{69aa86de-22ce-4300-a7eb-75c2a09141d8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\MapFile">
+      <UniqueIdentifier>{f7debd2b-adde-4d61-9fa1-0933d98dedb9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\SceneFile\SceneManager.h">
@@ -81,11 +84,11 @@
     <ClInclude Include="Source\CollisionFile\FloorCollision.h">
       <Filter>Source\CollisionFile</Filter>
     </ClInclude>
-    <ClInclude Include="Source\ObjectFile\Map.h">
-      <Filter>Source\ObjectFile</Filter>
-    </ClInclude>
     <ClInclude Include="Source\SceneFile\MainScene.h">
       <Filter>Source\SceneFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MapFile\MapManager.h">
+      <Filter>Source\MapFile</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

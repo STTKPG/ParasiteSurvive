@@ -3,16 +3,10 @@
 
 #include "../Common.h"
 #include "../ObjectFile/ObjectManager.h"
+#include "SceneBase.h"
 
 class SceneManager
 {
-public:
-	enum class SceneStep
-	{
-		Init,
-		Main,
-		Finish
-	};
 
 public:
 	static SceneManager* Instance()
@@ -23,20 +17,18 @@ public:
 
 public:
 	~SceneManager(){}
-	Scene::SceneKind Run();
-	Scene::SceneKind ReturnCurrentScene()
+	SceneBase::SceneKind Run()
 	{
-		return CurrentScene;
+		return CurrentScene->Run();
 	}
+
 
 private:
 	SceneManager(){}
 	SceneManager(const SceneManager& Ins) = delete;
 
-public:
-	Scene::SceneKind CurrentScene;
 private:
-	SceneStep CurrentStep;
+	SceneBase* CurrentScene;
 
 };
 

@@ -4,11 +4,17 @@
 class SceneBase
 {
 public:
+	enum class SceneKind
+	{
+		MainScene,
+		OverScene
+	};
+public:
 	SceneBase(){}
 	virtual ~SceneBase(){}
 
 public:
-	void Run();
+	SceneKind Run();
 };
 
 #endif // !
