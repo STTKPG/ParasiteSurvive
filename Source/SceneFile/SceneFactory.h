@@ -11,11 +11,13 @@ public:
 		switch (next)
 		{
 		case SceneBase::SceneKind::MainScene:
-			new MainScene;
+			return new MainScene;
 			break;
 		case SceneBase::SceneKind::OverScene:
+			return nullptr;
 			break;
 		default:
+			return nullptr;
 			break;
 		}
 	}

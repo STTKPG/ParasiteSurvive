@@ -6,7 +6,7 @@
 class Floor : public ObjectBase
 {
 public:
-	Floor(ObjectType type,bool is_draw, Vector pos) :ObjectBase(type,is_draw, pos)
+	Floor(ObjectType type,bool is_draw, Vector pos,Vector rotate) :ObjectBase(type,is_draw, pos,rotate)
 	{
 		
 	}

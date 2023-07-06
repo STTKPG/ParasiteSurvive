@@ -34,6 +34,7 @@
     <ClInclude Include="Source\ObjectFile\ObjectManager.h" />
     <ClInclude Include="Source\ObjectFile\Player.h" />
     <ClInclude Include="Source\ObjectFile\TargetObject.h" />
+    <ClInclude Include="Source\ObjectFile\Wall.h" />
     <ClInclude Include="Source\Quaternion.h" />
     <ClInclude Include="Source\SceneFile\MainScene.h" />
     <ClInclude Include="Source\SceneFile\SceneBase.h" />

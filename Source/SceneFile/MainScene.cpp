@@ -1,10 +1,21 @@
 #include "MainScene.h"
 #include "../ObjectFile/Player.h"
-void MainScene::Run()
+SceneBase::SceneKind MainScene::Run()
 {
-	Player::Instance()->Update();
 	ObjectManager::Instance()->Update();
 
-	Player::Instance()->Draw();
+	ObjectManager::Instance()->Draw();
+
+	return SceneKind::MainScene;
+}
+
+SceneBase::SceneKind MainScene::Update()
+{
+	ObjectManager::Instance()->Update();
+	return SceneKind::MainScene;
+}
+
+void MainScene::Draw()
+{
 	ObjectManager::Instance()->Draw();
 }

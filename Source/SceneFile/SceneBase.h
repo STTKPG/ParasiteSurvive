@@ -14,8 +14,8 @@ public:
 	virtual ~SceneBase(){}
 
 public:
-	SceneKind Run();
-	SceneKind CurrentScene();
+	virtual SceneKind Update() = 0;
+	virtual void Draw() = 0;
 
 };
 

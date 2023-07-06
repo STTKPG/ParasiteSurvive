@@ -19,7 +19,7 @@ public:
 	}
 
 public:
-	bool Entry(ObjectBase::ObjectType type,Vector pos);
+	bool Entry(ObjectBase::ObjectType type,Vector pos,Vector rotate = Vector(0,0,0));
 	void Update();
 	void Draw();
 	void Erase();
@@ -48,7 +48,7 @@ private:
 
 private:
 	std::list<ObjectBase*> Objects;
-
+	ObjectBase* player;
 };
 
 #endif // !OBJECTMANAGER_H

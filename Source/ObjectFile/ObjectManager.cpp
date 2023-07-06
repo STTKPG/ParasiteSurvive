@@ -2,9 +2,15 @@
 #include "ModelManager.h"
 #include "ObjectFactory.h"
 
-bool ObjectManager::Entry(ObjectBase::ObjectType type,Vector pos)
+bool ObjectManager::Entry(ObjectBase::ObjectType type,Vector pos,Vector rotate)
 {
-	ObjectBase* Obj = ObjectFactory::Create(type,pos);
+	ObjectBase* Obj = ObjectFactory::Create(type,pos,rotate);
+	
+	if (Obj->Type == ObjectBase::ObjectType::Player)
+	{
+		player = Obj;
+	}
+
 	if (Obj == nullptr)
 	{
 		return false;

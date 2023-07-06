@@ -28,6 +28,7 @@ public:
 	virtual void Update() = 0;
 	virtual void Draw(int modeldata)
 	{
+		MV1SetRotationXYZ(modeldata, Rotate.Vec);
 		MV1SetPosition(modeldata, Pos.Vec);
 		MV1DrawModel(modeldata);
 	}

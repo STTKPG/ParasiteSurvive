@@ -20,9 +20,12 @@ public:
 		if (CurrentScene == nullptr)
 		{
 			CurrentScene = SceneFactory::CreateScene(NewSceneStep);
+			ModelManager::Instance()->LoadModel(NewSceneStep);
 		}
 
-		NewSceneStep = CurrentScene->Run();
+		NewSceneStep = CurrentScene->Update();
+
+		CurrentScene->Draw();
 
 		if (NewSceneStep != OldSceneStep)
 		{

@@ -34,6 +34,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	ModelManager::Instance()->LoadModel(Scene::SceneKind::Test);*/
 	while (CheckHitKey(KEY_INPUT_RETURN) == 0)
 	{
+
 		//// 左右キーでカメラの回転値を変更
 		//if (CheckHitKey(KEY_INPUT_LEFT) == 1)
 		//{
@@ -48,6 +49,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//camera.SetPositionAndTarget(ObjectManager::Instance()->GetObjectPos(ObjectBase::Player),ObjectManager::Instance()->GetObjectPos(ObjectBase::Target));
 		ScreenFlip();
 		ClearDrawScreen();
+		
+		SceneManager::Instance()->Run();
 		//int test = DrawSphere3D(VGet(0, 0, 10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
 		//DrawSphere3D(VGet(0, 0, -10), 5, 32, GetColor(255, 0, 0), GetColor(255, 255, 255), TRUE);
 	    //DrawCone3D(VGet(0,-10,10), VGet(0,10,10), 5, 16, GetColor(0, 0, 255), GetColor(255, 255, 255), TRUE);

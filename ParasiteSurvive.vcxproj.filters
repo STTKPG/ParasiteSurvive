@@ -90,6 +90,9 @@
     <ClInclude Include="Source\MapFile\MapManager.h">
       <Filter>Source\MapFile</Filter>
     </ClInclude>
+    <ClInclude Include="Source\ObjectFile\Wall.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\ObjectFile\Player.cpp">
