@@ -21,9 +21,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	int handle = MV1LoadModel("ModelData/Floor_Standard.mv1");
 
 	int handleW = MV1LoadModel("ModelData/Wall.mv1");
+
+	int handleA = MV1LoadModel("ModelData/Revolver.mv1");
 	SetMousePoint(320, 240);
 	SetDrawScreen(DX_SCREEN_BACK);
-	//SetUseLighting(FALSE);
+	SetUseLighting(FALSE);
 	SetUseZBuffer3D(TRUE);
 	SetWriteZBuffer3D(TRUE);
 	SetGraphMode(200, 200, 64);
@@ -78,6 +80,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 		MV1SetPosition(handleW, VGet(0, -600, 0));
 		MV1DrawModel(handleW);
+		MV1SetPosition(handleA, VGet(20, -200, 0));
+		MV1DrawModel(handleA);
 		DrawLine3D(VGet(0, -400, 0), VGet(0, -800, 0), GetColor(255, 0, 0));
 
 		//DrawSphere3D(VAdd(ObjectManager::Instance()->GetObjectPos(ObjectBase::Target),VGet(0,0,10)), 1, 32, GetColor(0, 255, 0), GetColor(255, 255, 255), TRUE);
