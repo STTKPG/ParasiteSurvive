@@ -1,20 +1,16 @@
 #include "ModelManager.h"
 #include "DxLib.h"
 
-void ModelManager::LoadModel(Scene::SceneKind Type)
+void ModelManager::LoadModel(SceneBase::SceneKind scene)
 {
-	switch (Type)
+	switch (scene)
 	{
-	case Scene::SceneKind::Title:
-		break;
-	case Scene::SceneKind::Main:
-		break;
-	case Scene::SceneKind::Over:
-		break;
-	case Scene::SceneKind::Clear:
-		break;
-	case Scene::SceneKind::Test:
+	case SceneBase::SceneKind::MainScene:
 		ModelData.insert(std::make_pair(ObjectBase::ObjectType::Barrel, MV1LoadModel("modelData/Barrel.mv1")));
+		ModelData.insert(std::make_pair(ObjectBase::ObjectType::Floor, MV1LoadModel("modelData/Floor_Standard.mv1")));
+		ModelData.insert(std::make_pair(ObjectBase::ObjectType::Wall, MV1LoadModel("modelData/Wall.mv1")));
+		break;
+	case SceneBase::SceneKind::OverScene:
 		break;
 	default:
 		break;
@@ -44,3 +40,6 @@ void ModelManager::AllDeleteModel()
 
 	ModelData.clear();
 }
+
+
+//ModelData.insert(std::make_pair(ObjectBase::ObjectType::Barrel, MV1LoadModel("modelData/Barrel.mv1")));

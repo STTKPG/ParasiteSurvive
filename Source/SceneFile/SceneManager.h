@@ -1,35 +1,49 @@
 #ifndef SCENEMANAGER_H
 #define SCENEMANAGER_H
 
-#include "../Common.h"
 #include "../ObjectFile/ObjectManager.h"
-#include "SceneBase.h"
-
+#include "SceneFactory.h"
 class SceneManager
 {
 
 public:
 	static SceneManager* Instance()
 	{
-		static SceneManager instance;
+		static SceneManager instance(SceneBase::SceneKind::OverScene,SceneBase::SceneKind::MainScene);
 		return &instance;
 	}
 
 public:
 	~SceneManager(){}
-	SceneBase::SceneKind Run()
+	void Run()
 	{
-		return CurrentScene->Run();
-	}
+		if (CurrentScene == nullptr)
+		{
+			CurrentScene = SceneFactory::CreateScene(NewSceneStep);
+		}
+
+		NewSceneStep = CurrentScene->Run();
+
+		if (NewSceneStep != OldSceneStep)
+		{
+			delete CurrentScene;
+			CurrentScene = nullptr;
+		}
+		OldSceneStep = NewSceneStep;
+		
+	} 
 
 
 private:
-	SceneManager(){}
+	SceneManager(SceneBase::SceneKind oscene, SceneBase::SceneKind nscene) :
+	OldSceneStep(oscene),
+	NewSceneStep(nscene){}
 	SceneManager(const SceneManager& Ins) = delete;
 
 private:
 	SceneBase* CurrentScene;
-
+	SceneBase::SceneKind OldSceneStep;
+	SceneBase::SceneKind NewSceneStep;
 };
 
 #endif // !SCENEMANAGER_H

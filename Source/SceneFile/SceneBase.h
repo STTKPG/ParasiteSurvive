@@ -15,6 +15,8 @@ public:
 
 public:
 	SceneKind Run();
+	SceneKind CurrentScene();
+
 };
 
 #endif // !

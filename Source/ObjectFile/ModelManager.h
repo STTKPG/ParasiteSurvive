@@ -3,8 +3,9 @@
 
 #include <map>
 #include <string>
-#include "..\Common.h"
 #include "ObjectBase.h"
+#include "../SceneFile/SceneBase.h"
+
 class ModelManager
 {
 public:
@@ -17,7 +18,7 @@ public:
 
 	~ModelManager(){}
 
-	void LoadModel(Scene::SceneKind Type);
+	void LoadModel(SceneBase::SceneKind currentscene);
 	int SetModelData(ObjectBase::ObjectType type);
 	void Deletemodel(ObjectBase::ObjectType type);
 	void AllDeleteModel();

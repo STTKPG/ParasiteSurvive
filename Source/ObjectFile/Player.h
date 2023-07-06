@@ -8,11 +8,10 @@
 class Player : public ObjectBase
 {
 public:
-	Player(ObjectType type,bool is_draw, Vector pos) : ObjectBase(type,is_draw,pos)
-		, DegreeXZ(180)
-		, DegreeY(180)
+	static Player* Instance()
 	{
-
+		static Player instance(ObjectType::Player,true,Vector(0,200,0));
+		return &instance;
 	}
 	~Player(){}
 
@@ -22,7 +21,7 @@ public:
 		return Rotate;
 	}
 	
-protected:
+public:
 	void Update()override;
 
 private:
@@ -30,6 +29,15 @@ private:
 	float DegreeY;
 	float DegreeXZ;
 	Camera camera;
+
+private:
+	Player(const Player& obj){}
+	Player(ObjectType type, bool is_draw, Vector pos) : ObjectBase(type, is_draw, pos)
+		, DegreeXZ(180)
+		, DegreeY(180)
+	{
+
+	}
 };
 
 #endif // !PLAYER_H

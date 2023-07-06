@@ -16,14 +16,13 @@ public:
 		ObjectManager::Instance()->Entry(ObjectBase::Floor, Vector(0, 0, 200));
 		ObjectManager::Instance()->Entry(ObjectBase::Floor, Vector(0, 0, 400));
 		ObjectManager::Instance()->Entry(ObjectBase::Floor, Vector(200, 0, 400));
-		ObjectManager::Instance()->Entry(ObjectBase::Player, Vector(0, 200, 0));
+		ObjectManager::Instance()->Entry(ObjectBase::Wall, Vector(-100, 0, 0));
+		ObjectManager::Instance()->Entry(ObjectBase::Wall, Vector(-100, 0, -100));
 	}
 	~MainScene(){}
 
 protected:
-	void Run();
-
-private:
+	SceneKind Run();
 
 };
 

@@ -12,7 +12,8 @@ public:
 		Enemy,
 		Floor,
 		Barrel,
-		Target
+		Target,
+		Wall
 	};
 public:
 	ObjectBase(ObjectType type,bool is_draw,Vector pos = Vector(0,0,0), Vector rotate = Vector(0, 0, 0)) :

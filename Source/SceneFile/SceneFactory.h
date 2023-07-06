@@ -1,24 +1,24 @@
 #ifndef SCENEFACTORY_H
 #define SCENEFACTORY_H
 
-#include "../Common.h"
-
+#include "SceneBase.h"
+#include "MainScene.h"
 class SceneFactory
 {
 public:
-	SceneFactory* Instance()
+	static SceneBase* CreateScene(SceneBase::SceneKind next)
 	{
-		static SceneFactory instance;
-		return &instance;
+		switch (next)
+		{
+		case SceneBase::SceneKind::MainScene:
+			new MainScene;
+			break;
+		case SceneBase::SceneKind::OverScene:
+			break;
+		default:
+			break;
+		}
 	}
-	~SceneFactory() {}
-
-public:
-	void CreateScene(Scene::SceneKind next);
-	void Run();
-private:
-	SceneFactory() {}
-	SceneFactory(const SceneFactory& obj) {}
 };
 
 #endif // !SCENEFACTORY_H
