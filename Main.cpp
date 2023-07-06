@@ -22,7 +22,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	int handleW = MV1LoadModel("ModelData/Wall.mv1");
 
-	int handleA = MV1LoadModel("ModelData/Revolver.mv1");
+	int handleA = MV1LoadModel("ModelData/Revolver1.mv1");
 	SetMousePoint(320, 240);
 	SetDrawScreen(DX_SCREEN_BACK);
 	SetUseLighting(FALSE);
@@ -81,6 +81,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		MV1SetPosition(handleW, VGet(0, -600, 0));
 		MV1DrawModel(handleW);
 		MV1SetPosition(handleA, VGet(20, -200, 0));
+		MV1SetRotationXYZ(handleA, VGet(DX_PI, 0, 0));
+		MV1SetScale(handleA, VGet(0.5f, 0.5f, 0.5f));
 		MV1DrawModel(handleA);
 		DrawLine3D(VGet(0, -400, 0), VGet(0, -800, 0), GetColor(255, 0, 0));
 
