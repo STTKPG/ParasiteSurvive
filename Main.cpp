@@ -32,7 +32,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	SetWriteZBuffer3D(TRUE);
 	SetGraphMode(200, 200, 64);/*
 	ModelManager::Instance()->LoadModel(Scene::SceneKind::Test);*/
-	while (CheckHitKey(KEY_INPUT_RETURN) == 0)
+ 	while (CheckHitKey(KEY_INPUT_RETURN) == 0)
 	{
 
 		//// 左右キーでカメラの回転値を変更

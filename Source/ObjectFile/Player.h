@@ -8,9 +8,20 @@
 class Player : public ObjectBase
 {
 public:
-	Player(ObjectType type, bool is_draw, Vector pos) : ObjectBase(type, is_draw, pos)
-		, DegreeXZ(180)
+	enum PlayerAction
+	{
+		Walk,
+		Shoot,
+		Idle
+	};
+public:
+	Player(ObjectType type, Vector pos) : ObjectBase(type, pos)
 		, DegreeY(180)
+		, Current(Idle)
+		,Old(Idle)
+		,AnimTotalTime(0)
+		,PlayTime(0)
+		,AttachIndex(3)
 	{
 
 	}
@@ -25,13 +36,13 @@ public:
 	
 public:
 	void Update()override;
-
+	void Draw(int modeldata)override;
 private:
-	VECTOR TargetRotate;
 	float DegreeY;
-	float DegreeXZ;
-	Camera camera;
-
+	PlayerAction Current;
+	PlayerAction Old;
+	float AnimTotalTime,PlayTime;
+	int AttachIndex;
 };
 
 #endif // !PLAYER_H

@@ -9,7 +9,10 @@ void ModelManager::LoadModel(SceneBase::SceneKind scene)
 		ModelData.insert(std::make_pair(ObjectBase::ObjectType::Barrel, MV1LoadModel("modelData/Barrel.mv1")));
 		ModelData.insert(std::make_pair(ObjectBase::ObjectType::Floor, MV1LoadModel("modelData/Floor_Standard.mv1")));
 		ModelData.insert(std::make_pair(ObjectBase::ObjectType::Wall, MV1LoadModel("modelData/Wall.mv1")));
-		ModelData.insert(std::make_pair(ObjectBase::ObjectType::Player, 0));
+		ModelData.insert(std::make_pair(ObjectBase::ObjectType::WallDoor, MV1LoadModel("modelData/Wall_Door.mv1")));
+		ModelData.insert(std::make_pair(ObjectBase::ObjectType::Door, MV1LoadModel("modelData/Door.mv1")));
+		ModelData.insert(std::make_pair(ObjectBase::ObjectType::Player, MV1LoadModel("modeldata/Player.mv1")));
+		ModelData.insert(std::make_pair(ObjectBase::ObjectType::Arch, MV1LoadModel("modeldata/Arch.mv1")));
 		break;
 	case SceneBase::SceneKind::OverScene:
 		break;

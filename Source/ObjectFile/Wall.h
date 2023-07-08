@@ -6,11 +6,14 @@
 class Wall : public ObjectBase
 {
 public:
-	Wall(ObjectType type, bool is_draw, Vector pos,Vector rotate) :ObjectBase(type, is_draw, pos,rotate){}
+	Wall(ObjectType type,Vector pos,Vector rotate,Vector scale) :ObjectBase(type,pos,rotate,scale){}
 	~Wall(){}
 
 protected:
-	void Update(){}
+	void Update()
+	{
+
+	}
 
 };
 

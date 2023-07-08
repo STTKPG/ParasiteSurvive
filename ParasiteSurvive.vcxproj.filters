@@ -93,6 +93,15 @@
     <ClInclude Include="Source\ObjectFile\Wall.h">
       <Filter>Source\ObjectFile</Filter>
     </ClInclude>
+    <ClInclude Include="Source\ObjectFile\WallDoor.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ObjectFile\Door.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ObjectFile\Arch.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\ObjectFile\Player.cpp">

@@ -26,7 +26,9 @@
     <ClInclude Include="Source\InputFile\Mouse.h" />
     <ClInclude Include="Source\MapFile\MapManager.h" />
     <ClInclude Include="Source\Matrix.h" />
+    <ClInclude Include="Source\ObjectFile\Arch.h" />
     <ClInclude Include="Source\ObjectFile\Barrel.h" />
+    <ClInclude Include="Source\ObjectFile\Door.h" />
     <ClInclude Include="Source\ObjectFile\Floor.h" />
     <ClInclude Include="Source\ObjectFile\ModelManager.h" />
     <ClInclude Include="Source\ObjectFile\ObjectBase.h" />
@@ -35,6 +37,7 @@
     <ClInclude Include="Source\ObjectFile\Player.h" />
     <ClInclude Include="Source\ObjectFile\TargetObject.h" />
     <ClInclude Include="Source\ObjectFile\Wall.h" />
+    <ClInclude Include="Source\ObjectFile\WallDoor.h" />
     <ClInclude Include="Source\Quaternion.h" />
     <ClInclude Include="Source\SceneFile\MainScene.h" />
     <ClInclude Include="Source\SceneFile\SceneBase.h" />

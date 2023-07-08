@@ -2,29 +2,34 @@
 #define CAMERA_H
 
 #include "DxLib.h"
+#include "Vector.h"
 
 class Camera
 {
 public:
-	Camera(int cnear = 0, int cfar = 1000,VECTOR pos = VGet(0,0,0), VECTOR target = VGet(0, 0, 1)) :
+	Camera(Vector pos, Vector target,int cnear = 0, int cfar = 1000) :
 		Near(cnear),Far(cfar),Pos(pos),Target(target)
 	{
 		SetCameraNearFar(Near, Far);
-		SetCameraPositionAndTargetAndUpVec(Pos, Target, VGet(0, 1, 0));
+		SetCameraPositionAndTargetAndUpVec(Pos.Vec, Target.Vec, Vector(0,1,0).Vec);
 	}
 	~Camera() {}
 
 public:
 	void SetTarget(VECTOR target);
-	void SetPositionAndTargetAndUpVec(VECTOR pos, VECTOR target, VECTOR upvec);
-	void SetPositionAndTarget(VECTOR pos, VECTOR target);
+	void SetPositionAndTargetAndUpVec(Vector pos, Vector target, Vector upvec);
+	void SetPositionAndTarget(Vector pos, Vector target);
 	void SetCameraPositionAndRotate(VECTOR pos, float vrota,float hrota);
+	Vector GetPos()
+	{
+		return Pos;	
+	}
 
 private:
 	int Near;
 	int Far;
-	VECTOR Pos;
-	VECTOR Target;
+	Vector Pos;
+	Vector Target;
 
 };
 

@@ -21,7 +21,7 @@ public:
 public:
 	bool Entry(ObjectBase::ObjectType type,Vector pos,Vector rotate = Vector(0,0,0));
 	void Update();
-	void Draw();
+	void Draw(Vector camerapos);
 	void Erase();
 	void EraseAll();
 	std::list<ObjectBase*> GetObjectsDate(ObjectBase::ObjectType type);
@@ -38,7 +38,14 @@ public:
 
 		return Vector(0,0,0);
 	}
-
+	Vector PlayerPos()
+	{
+		return player->Pos;
+	}
+	Vector PlayerRotate()
+	{
+		return player->Rotate;
+	}
 private:
 	ObjectManager()
 	{

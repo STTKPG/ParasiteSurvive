@@ -65,17 +65,37 @@ public:
 		return *this;
 	}
 
+	Vector& operator -= (Vector r)
+	{
+		this->Vec.x -= r.Vec.x;
+		this->Vec.y -= r.Vec.y;
+		this->Vec.z -= r.Vec.z;
+
+		return *this;
+	}
+
 	Vector Xvec()
 	{
 		return Vector(this->Vec.x * 1, 0, 0);
 	}
 
+	Vector XZVec()
+	{
+		return Vector(this->Vec.x, 0, this->Vec.z);
+	}
+
 	Vector Normal()
 	{
-		float Direction = sqrtf(this->Vec.x * this->Vec.x + this->Vec.y * this->Vec.y + this->Vec.z * this->Vec.z);
+		float Direction = this->Length();
 		return Vector(this->Vec.x / Direction,
 			          this->Vec.y / Direction,
 			          this->Vec.z / Direction);
+	}
+
+	float Length()
+	{
+		float Direction = sqrtf(this->Vec.x * this->Vec.x + this->Vec.y * this->Vec.y + this->Vec.z * this->Vec.z);
+		return Direction;
 	}
 };
 

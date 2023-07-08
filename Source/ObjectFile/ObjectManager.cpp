@@ -32,14 +32,55 @@ void ObjectManager::Update()
 	}
 }
 
-void ObjectManager::Draw()
+void ObjectManager::Draw(Vector camerapos)
 {
+	std::list<ObjectBase*> DrawList;
+
 	for (ObjectBase* Obj : Objects)
 	{
-		if (Obj->Is_Draw == true)
+		Vector Length(0,0,0);
+
+		Length = camerapos - Obj->Pos;
+
+		Obj->CameraDirection = Length.Length();
+		if (DrawList.size() == 0)
 		{
-			Obj->Draw(ModelManager::Instance()->SetModelData(Obj->Type));
+			DrawList.push_back(Obj);
 		}
+		else
+		{
+			int Size = DrawList.size();
+			for (auto itr = DrawList.begin(); itr != DrawList.end(); itr++)
+			{
+				if ((*itr)->CameraDirection <= Obj->CameraDirection)
+				{
+					DrawList.insert(itr, Obj);
+					break;
+				}
+			}
+			if (Size == DrawList.size())
+			{
+				DrawList.push_back(Obj);
+			}
+		}
+	}
+
+	std::list<ObjectBase*> ReverceDrawList;
+	for (ObjectBase* DrawObj : DrawList)
+	{
+		if (DrawObj->Type == ObjectBase::Floor)
+		{
+			ReverceDrawList.push_front(DrawObj);
+		}
+		else
+		{
+			ReverceDrawList.push_back(DrawObj);
+		}
+	}
+	
+	for (ObjectBase* DrawObj : ReverceDrawList)
+	{
+			DrawObj->Draw(ModelManager::Instance()->SetModelData(DrawObj->Type));
 	}
 }
 
