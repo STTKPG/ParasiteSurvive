@@ -11,10 +11,11 @@
 
 SceneBase::SceneKind MainScene::Update()
 {
+	
 	ObjectManager::Instance()->Update();
 	camera->SetPositionAndTarget(ObjectManager::Instance()->PlayerRotate(), ObjectManager::Instance()->PlayerPos());
-	return SceneKind::MainScene;
-	return SceneKind::MainScene;
+
+	return ObjectManager::Instance()->PlayerScene();
 }
 
 void MainScene::Draw()

@@ -19,7 +19,7 @@ public:
 	}
 
 public:
-	bool Entry(ObjectBase::ObjectType type,Vector pos,Vector rotate = Vector(0,0,0));
+	bool Entry(ObjectBase::ObjectType type, Vector pos, Vector rotate = Vector(0, 0, 0), Vector scale = Vector(1, 1, 1), SceneBase::SceneKind scene = SceneBase::SceneKind::MainScene,std::string message = "");
 	void Update();
 	void Draw(Vector camerapos);
 	void Erase();
@@ -46,8 +46,12 @@ public:
 	{
 		return player->Rotate;
 	}
-private:
-	ObjectManager()
+	SceneBase::SceneKind PlayerScene()
+	{
+		return player->CurrentScene;
+	}
+	private:
+	ObjectManager():player(nullptr)
 	{
 		Objects.clear();
 	}

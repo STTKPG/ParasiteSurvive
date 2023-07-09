@@ -6,7 +6,7 @@
 class Door : public ObjectBase
 {
 public:
-	Door(ObjectType type, Vector pos, Vector rotate) :ObjectBase(type, pos, rotate) {}
+	Door(ObjectType type, Vector pos, Vector rotate, Vector scale, SceneBase::SceneKind scene,Vector size = Vector(200,0,200)) :ObjectBase(type,scene, pos, rotate, scale,size){}
 	~Door(){}
 
 protected:

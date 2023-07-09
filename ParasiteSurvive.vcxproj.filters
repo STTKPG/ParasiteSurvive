@@ -63,12 +63,6 @@
     <ClInclude Include="Source\SceneFile\SceneFactory.h">
       <Filter>Source\SceneFile</Filter>
     </ClInclude>
-    <ClInclude Include="Source\ObjectFile\TargetObject.h">
-      <Filter>Source\ObjectFile</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\ObjectFile\Barrel.h">
-      <Filter>Source\ObjectFile</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Matrix.h">
       <Filter>Source</Filter>
     </ClInclude>
@@ -102,6 +96,24 @@
     <ClInclude Include="Source\ObjectFile\Arch.h">
       <Filter>Source\ObjectFile</Filter>
     </ClInclude>
+    <ClInclude Include="Source\HitBox.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SceneFile\MainScene2.h">
+      <Filter>Source\SceneFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ObjectFile\Enemy.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SceneFile\MainScene3.h">
+      <Filter>Source\SceneFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SceneFile\MainScene4.h">
+      <Filter>Source\SceneFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ObjectFile\BookCase.h">
+      <Filter>Source\ObjectFile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\ObjectFile\Player.cpp">
@@ -109,9 +121,6 @@
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\ObjectFile\TargetObject.cpp">
-      <Filter>Source\ObjectFile</Filter>
     </ClCompile>
     <ClCompile Include="Source\ObjectFile\Floor.cpp">
       <Filter>Source\ObjectFile</Filter>
@@ -137,13 +146,22 @@
     <ClCompile Include="Source\SceneFile\TestScene.cpp">
       <Filter>Source\SceneFile</Filter>
     </ClCompile>
-    <ClCompile Include="Source\ObjectFile\Barrel.cpp">
-      <Filter>Source\ObjectFile</Filter>
-    </ClCompile>
     <ClCompile Include="Source\CollisionFile\CollisionManager.cpp">
       <Filter>Source\CollisionFile</Filter>
     </ClCompile>
     <ClCompile Include="Source\SceneFile\MainScene.cpp">
+      <Filter>Source\SceneFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneFile\MainScene2.cpp">
+      <Filter>Source\SceneFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ObjectFile\Enemy.cpp">
+      <Filter>Source\ObjectFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneFile\MainScene3.cpp">
+      <Filter>Source\SceneFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneFile\MainScene4.cpp">
       <Filter>Source\SceneFile</Filter>
     </ClCompile>
   </ItemGroup>

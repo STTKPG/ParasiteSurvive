@@ -1,10 +1,8 @@
 #include "DxLib.h"
 #include <math.h>
-#include "Source/ObjectFile/TargetObject.h"
 #include "Source/ObjectFile/ObjectBase.h"
 #include "Source/ObjectFile/ModelManager.h"
 #include "Source/ObjectFile/ObjectManager.h"
-#include "Source/ObjectFile/Barrel.h"
 #include "Source/Camera.h"
 #include "Source/InputFile/Mouse.h"
 
@@ -28,8 +26,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	SetMousePoint(320, 240);
 	SetDrawScreen(DX_SCREEN_BACK);
 	SetUseLighting(FALSE);
-	SetUseZBuffer3D(TRUE);
-	SetWriteZBuffer3D(TRUE);
+	//SetUseZBuffer3D(TRUE);
+	//SetWriteZBuffer3D(TRUE);
 	SetGraphMode(200, 200, 64);/*
 	ModelManager::Instance()->LoadModel(Scene::SceneKind::Test);*/
  	while (CheckHitKey(KEY_INPUT_RETURN) == 0)

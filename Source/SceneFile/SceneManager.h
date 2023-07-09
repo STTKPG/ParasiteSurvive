@@ -9,7 +9,7 @@ class SceneManager
 public:
 	static SceneManager* Instance()
 	{
-		static SceneManager instance(SceneBase::SceneKind::OverScene,SceneBase::SceneKind::MainScene);
+		static SceneManager instance(SceneBase::SceneKind::MainScene3,SceneBase::SceneKind::MainScene3);
 		return &instance;
 	}
 
@@ -31,6 +31,7 @@ public:
 		{
 			delete CurrentScene;
 			CurrentScene = nullptr;
+			ModelManager::Instance()->AllDeleteModel();
 		}
 		OldSceneStep = NewSceneStep;
 		

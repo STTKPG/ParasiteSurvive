@@ -6,7 +6,7 @@
 class Floor : public ObjectBase
 {
 public:
-	Floor(ObjectType type,Vector pos,Vector rotate, Vector scale) :ObjectBase(type,pos,rotate,scale)
+	Floor(ObjectType type,Vector pos,Vector rotate, Vector scale,SceneBase::SceneKind scene = SceneBase::SceneKind::OverScene) :ObjectBase(type,scene,pos,rotate,scale)
 	{
 		
 	}
@@ -14,7 +14,7 @@ public:
 
 public:
 	void Update()override;
-	void Collision();
+
 
 };
 

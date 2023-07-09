@@ -6,7 +6,7 @@
 class Arch : public ObjectBase
 {
 public:
-	Arch(ObjectType type, Vector pos, Vector rotate, Vector scale) :ObjectBase(type, pos, rotate, scale){}
+	Arch(ObjectType type, Vector pos, Vector rotate, Vector scale,SceneBase::SceneKind scene = SceneBase::SceneKind::OverScene) :ObjectBase(type,scene, pos, rotate, scale) {}
 	~Arch(){}
 
 private:

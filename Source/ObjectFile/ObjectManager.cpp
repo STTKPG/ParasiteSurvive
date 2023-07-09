@@ -2,9 +2,9 @@
 #include "ModelManager.h"
 #include "ObjectFactory.h"
 
-bool ObjectManager::Entry(ObjectBase::ObjectType type,Vector pos,Vector rotate)
+bool ObjectManager::Entry(ObjectBase::ObjectType type,Vector pos,Vector rotate, Vector scale,SceneBase::SceneKind scene , std::string message)
 {
-	ObjectBase* Obj = ObjectFactory::Create(type,pos,rotate);
+	ObjectBase* Obj = ObjectFactory::Create(type,scene,pos,message,rotate,scale);
 	
 	if (Obj->Type == ObjectBase::ObjectType::Player)
 	{
@@ -25,6 +25,7 @@ void ObjectManager::Update()
 {
 	for (ObjectBase* Obj : Objects)
 	{
+		player->OnCollision(Obj);
 		if (Obj->Is_Alive == true)
 		{
 			Obj->Update();
@@ -82,6 +83,13 @@ void ObjectManager::Draw(Vector camerapos)
 	{
 			DrawObj->Draw(ModelManager::Instance()->SetModelData(DrawObj->Type));
 	}
+
+	if (player->Is_Interact == true)
+	{
+		DrawString(200, 300, "ŠJ‚¯‚é(E)", GetColor(255, 0, 0));
+	}
+	DrawString(200, 300, player->Message.c_str(), GetColor(255, 0, 0));
+	player->Message = "";
 }
 
 void ObjectManager::Erase()

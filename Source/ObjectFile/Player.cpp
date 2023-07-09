@@ -25,17 +25,33 @@ void Player::Update()
 	Rotate = Vec;
 
 	Current = Idle;
-	if (CheckHitKey(KEY_INPUT_W) == 1)
+
+	if ((GetMouseInput() & MOUSE_INPUT_LEFT) != 0)
+	{
+		
+	}
+	if (Is_Hit == true)
+	{
+		Current = Idle;
+		Pos = Vector(0, 0, 0);
+		Is_Hit = false;
+	}
+	else if (CheckHitKey(KEY_INPUT_W) == 1)
 	{
 		Current = Walk;
 		Pos += Vector(-sinf(Rad),0, -cosf(Rad));
 	}	
-	if (CheckHitKey(KEY_INPUT_S) == 1)
+	else if (CheckHitKey(KEY_INPUT_S) == 1)
 	{
 		Current = Walk;
 		Pos -= Vector(-sinf(Rad), 0, -cosf(Rad));
 	}
-
+	
+	if (Is_Interact == true)
+	{
+		
+		Is_Interact = false;
+	}
 }
 
 void Player::Draw(int modeldata)
